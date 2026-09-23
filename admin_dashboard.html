@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Premium AutoCare</title>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="admin_dashboard.css">
+</head>
+
+<body>
+
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+
+    <nav class="sidebar" id="sidebar">
+        <div class="logo-container">
+            <h2 class="logo-text"><img src="./asset/skybluelogo.webp" alt="logo"></h2>
+            <div class="dashboard-badge">Service Management</div>
+        </div>
+
+        <div class="nav-sections">
+            <a class="nav-item active" onclick="switchTab('tab-overview', this, 'Workshop Overview')"><i
+                    class="fas fa-chart-line"></i> Overview</a>
+            <a class="nav-item" onclick="switchTab('tab-jobs', this, 'Active Service Jobs')"><i
+                    class="fas fa-tools"></i> Active Jobs</a>
+            <a class="nav-item" onclick="switchTab('tab-inventory', this, 'Parts Inventory')"><i
+                    class="fas fa-boxes"></i> Inventory</a>
+            <a class="nav-item" onclick="switchTab('tab-appointments', this, 'Customer Appointments')"><i
+                    class="fas fa-calendar-alt"></i> Appointments</a>
+            <a class="nav-item" onclick="switchTab('tab-technicians', this, 'Technician Roster')"><i
+                    class="fas fa-users-cog"></i> Technicians</a>
+            <a class="nav-item" onclick="switchTab('tab-settings', this, 'Workshop Settings')"><i
+                    class="fas fa-cog"></i> Settings</a>
+        </div>
+
+        <div class="profile-card">
+            <div class="profile-avatar"><i class="fas fa-user-tie"></i></div>
+            <div class="profile-info">
+                <h4 id="userNameDisplay">Admin Manager</h4>
+                <p id="userEmailDisplay">admin@autocare.com</p>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="main-content">
+        <header class="topbar">
+            <div class="topbar-left">
+                <div class="menu-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></div>
+                <h2 id="dynamic-page-title" class="page-title">Workshop Overview</h2>
+            </div>
+
+            <div class="topbar-right">
+
+
+
+                <button onclick="window.location.href='index.html'" class="header-btn btn-outline">
+                    <i class="fas fa-house"></i> <span class="hide-mobile">Home</span>
+                </button>
+
+
+                <button onclick="logout()" class="header-btn logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> <span class="hide-mobile">Logout</span>
+                </button>
+            </div>
+        </header>
+
+        <div class="dashboard-body">
+
+            <!-- ==============================================
+                 TAB 1: OVERVIEW 
+            =============================================== -->
+            <div id="tab-overview" class="content-tab active-tab">
+                <div class="grid-4 mb-30">
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-icon bg-indigo"><i class="fas fa-wallet text-white"></i></div>
+                        <div class="stat-details">
+                            <p class="text-gray">Today's Revenue</p>
+                            <h2>₹45K</h2>
+                        </div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="150">
+                        <div class="stat-icon bg-emerald"><i class="fas fa-car-side text-white"></i></div>
+                        <div class="stat-details">
+                            <p class="text-gray">Cars Serviced</p>
+                            <h2>12</h2>
+                        </div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-icon bg-orange"><i class="fas fa-clock text-white"></i></div>
+                        <div class="stat-details">
+                            <p class="text-gray">Pending Jobs</p>
+                            <h2>08</h2>
+                        </div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="250">
+                        <div class="stat-icon bg-red"><i class="fas fa-exclamation-triangle text-white"></i></div>
+                        <div class="stat-details">
+                            <p class="text-gray">Low Stock Parts</p>
+                            <h2>05</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2 mb-30">
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Weekly Revenue Analysis</h3>
+                        <div class="chart-wrapper"><canvas id="revenueChart"></canvas></div>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Recent High-Value Payments</h3>
+                        <div class="table-wrapper">
+                            <table class="premium-table">
+                                <tr>
+                                    <th>Customer</th>
+                                    <th>Service</th>
+                                    <th>Amount</th>
+                                </tr>
+                                <tr>
+                                    <td>Ramesh K.</td>
+                                    <td>Engine Overhaul</td>
+                                    <td class="text-emerald">₹85,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Suresh M.</td>
+                                    <td>Ceramic Coating</td>
+                                    <td class="text-emerald">₹42,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Priya D.</td>
+                                    <td>Major Service</td>
+                                    <td class="text-emerald">₹31,500</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2 mb-30">
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Recent Customer Feedbacks</h3>
+                        <div class="list-item">
+                            <div><strong>Ramesh K. (BMW X5)</strong><br><span class="text-emerald text-sm"><i
+                                        class="fas fa-star"></i> 5.0 - Excellent Service</span></div>
+                            <button class="btn btn-outline btn-small" onclick="window.location.href='404page.html'"><i
+                                    class="fas fa-reply"></i> Reply</button>
+                        </div>
+                        <div class="list-item">
+                            <div><strong>Suresh M. (Audi A6)</strong><br><span class="text-orange text-sm"><i
+                                        class="fas fa-star"></i> 3.5 - Delayed Delivery</span></div>
+                            <button class="btn btn-outline btn-small" onclick="window.location.href='404page.html'"><i
+                                    class="fas fa-reply"></i> Reply</button>
+                        </div>
+                    </div>
+                    <div class="premium-card border-red" data-aos="fade-up">
+                        <h3 class="section-title text-red">Manager Action Required</h3>
+                        <div class="list-item">
+                            <div><i class="fas fa-file-invoice text-red"></i> Purchase Order #PO-209 is pending.</div>
+                            <button class="btn btn-danger btn-small" onclick="window.location.href='404page.html'"><i
+                                    class="fas fa-eye"></i> Review PO</button>
+                        </div>
+                        <div class="list-item">
+                            <div><i class="fas fa-user-clock text-red"></i> Technician leave request.</div>
+                            <button class="btn btn-danger btn-small" onclick="window.location.href='404page.html'"><i
+                                    class="fas fa-check"></i> Action</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==============================================
+                 TAB 2: ACTIVE JOBS
+            =============================================== -->
+            <div id="tab-jobs" class="content-tab">
+                <div class="flex-row mb-30" data-aos="fade-up">
+                    <h3 class="section-title mb-0">Currently in Workshop</h3>
+                    <button class="btn btn-primary" onclick="window.location.href='404page.html'"><i
+                            class="fas fa-folder-plus"></i> Open Job Card</button>
+                </div>
+
+                <div class="grid-3 mb-30">
+                    <div class="premium-card job-card" data-aos="fade-up">
+                        <div class="flex-row mb-15"><span class="badge warning">In Progress</span>
+                            <strong>#JC-101</strong>
+                        </div>
+                        <div class="job-img-wrapper"><img src="./asset/c4.webp" alt="Car" class="job-img"></div>
+                        <h4 class="mt-10">BMW X5 M-Sport</h4>
+                        <p class="text-gray text-sm mb-10">Engine Diagnostics | Tech: Raj</p>
+                        <div class="progress-container">
+                            <div class="progress-bar bg-orange" style="width: 60%;"></div>
+                        </div>
+                        <button class="btn btn-outline w-100 mt-20 btn-small"
+                            onclick="window.location.href='404page.html'"><i class="fas fa-edit"></i> Update
+                            Status</button>
+                    </div>
+                    <div class="premium-card job-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex-row mb-15"><span class="badge success">Ready</span> <strong>#JC-099</strong>
+                        </div>
+                        <div class="job-img-wrapper"><img src="./asset/c5.webp" alt="Car" class="job-img"></div>
+                        <h4 class="mt-10">Porsche 911</h4>
+                        <p class="text-gray text-sm mb-10">Ceramic Coating | Tech: Siva</p>
+                        <div class="progress-container">
+                            <div class="progress-bar bg-emerald" style="width: 100%;"></div>
+                        </div>
+                        <button class="btn btn-success w-100 mt-20 btn-small"
+                            onclick="window.location.href='404page.html'"><i class="fas fa-bell"></i> Notify
+                            Customer</button>
+                    </div>
+                    <div class="premium-card job-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex-row mb-15"><span class="badge danger">Waiting Parts</span>
+                            <strong>#JC-105</strong>
+                        </div>
+                        <div class="job-img-wrapper"><img src="./asset/c13.webp" alt="Car" class="job-img"></div>
+                        <h4 class="mt-10">Audi Q7</h4>
+                        <p class="text-gray text-sm mb-10">Brake Pad Change | Tech: Kumar</p>
+                        <div class="progress-container">
+                            <div class="progress-bar bg-red" style="width: 30%;"></div>
+                        </div>
+                        <button class="btn btn-danger w-100 mt-20 btn-small"
+                            onclick="window.location.href='404page.html'"><i class="fas fa-box"></i> Check
+                            Inventory</button>
+                    </div>
+                </div>
+
+                <div class="grid-3 mb-30">
+                    <div class="premium-card border-red" data-aos="fade-up">
+                        <h3 class="section-title text-red">Delayed Jobs Alert</h3>
+                        <div class="list-item"><span>Ford Endeavour (JC-092)</span><span class="badge danger">+2
+                                Days</span></div>
+                        <button class="btn btn-outline w-100 mt-15" onclick="window.location.href='404page.html'"><i
+                                class="fas fa-exclamation-triangle"></i>
+                            Escalate</button>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Completed Today</h3>
+                        <div class="readonly-box"><i class="fas fa-check-circle text-emerald"></i> Hyundai Creta -
+                            Delivered</div>
+                        <div class="readonly-box"><i class="fas fa-check-circle text-emerald"></i> Kia Seltos -
+                            Delivered</div>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Quality Check Queue</h3>
+                        <div class="list-item">
+                            <span>Toyota Fortuner</span>
+                            <button class="btn btn-outline btn-small" onclick="window.location.href='404page.html'"><i
+                                    class="fas fa-search"></i> Inspect</button>
+                        </div>
+                        <div class="list-item">
+                            <span>Honda City</span>
+                            <button class="btn btn-outline btn-small" onclick="window.location.href='404page.html'"><i
+                                    class="fas fa-search"></i> Inspect</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==============================================
+                 TAB 3: INVENTORY 
+            =============================================== -->
+            <div id="tab-inventory" class="content-tab">
+                <div class="premium-card mb-30" data-aos="fade-up">
+                    <div class="flex-row mb-20">
+                        <h3 class="section-title mb-0">Spare Parts Stock</h3>
+                        <button class="btn btn-primary btn-small" onclick="window.location.href='404page.html'"><i
+                                class="fas fa-download"></i> Export CSV</button>
+                    </div>
+                    <div class="table-wrapper">
+                        <table class="premium-table">
+                            <tr>
+                                <th>Part Name</th>
+                                <th>Category</th>
+                                <th>In Stock</th>
+                                <th>Unit Price</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr>
+                                <td>Synthetic Engine Oil</td>
+                                <td>Fluids</td>
+                                <td><span class="badge success">45 Ltrs</span></td>
+                                <td>₹850</td>
+                                <td><button class="btn btn-outline btn-small"
+                                        onclick="window.location.href='404page.html'"><i class="fas fa-edit"></i>
+                                        Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ceramic Brake Pads</td>
+                                <td>Brakes</td>
+                                <td><span class="badge warning">04 Sets</span></td>
+                                <td>₹12,500</td>
+                                <td><button class="btn btn-outline btn-small"
+                                        onclick="window.location.href='404page.html'"><i class="fas fa-edit"></i>
+                                        Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Cabin Filter</td>
+                                <td>Filters</td>
+                                <td><span class="badge danger">00 Pcs</span></td>
+                                <td>₹2,200</td>
+                                <td><button class="btn btn-danger btn-small"
+                                        onclick="window.location.href='404page.html'"><i class="fas fa-sync"></i>
+                                        Reorder</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="grid-2 mb-30">
+                    <div class="premium-card bg-red text-white" data-aos="fade-up">
+                        <h3 class="section-title text-white">Critical Low Stock Alerts</h3>
+                        <ul style="margin-left: 20px; line-height: 1.8; color: white;">
+                            <li>Tesla Model 3 Cabin Filter (0 pcs)</li>
+                            <li>Wiper Blades Universal (2 pcs)</li>
+                        </ul>
+                        <button class="btn btn-outline-white mt-20 w-100"
+                            onclick="window.location.href='404page.html'"><i class="fas fa-file-invoice"></i> Raise
+                            PO</button>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Most Consumed Parts (This Month)</h3>
+                        <div class="readonly-box"><i class="fas fa-oil-can text-indigo"></i> Synthetic Engine Oil - 120
+                            Ltrs</div>
+                        <div class="readonly-box"><i class="fas fa-filter text-indigo"></i> AC Cabin Filters - 45 Pcs
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2 mb-30">
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Pending Supplier Deliveries</h3>
+                        <div class="list-item"><span>BOSCH India (Filters)</span><span class="badge warning">Expected
+                                Today</span></div>
+                        <div class="list-item"><span>Castrol (Oils)</span><span class="badge warning">Expected
+                                Tomorrow</span></div>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Parts Expense Summary</h3>
+                        <div class="readonly-box" style="justify-content: space-between;">Total Spent (Oct):
+                            <strong>₹1,45,000</strong>
+                        </div>
+                        <button class="btn btn-primary w-100 mt-10" onclick="window.location.href='404page.html'"><i
+                                class="fas fa-chart-bar"></i> View Detailed
+                            Report</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==============================================
+                 TAB 4: APPOINTMENTS 
+            =============================================== -->
+            <div id="tab-appointments" class="content-tab">
+                <div class="grid-2 mb-30">
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Today's Bookings</h3>
+                        <div class="list-item">
+                            <div><strong>10:00 AM</strong> - Jaguar XF (Service)</div>
+                            <button class="btn btn-primary btn-small" onclick="window.location.href='404page.html'"><i
+                                    class="fas fa-user-check"></i> Assign</button>
+                        </div>
+                        <div class="list-item">
+                            <div><strong>02:30 PM</strong> - Range Rover (Detailing)</div>
+                            <button class="btn btn-primary btn-small" onclick="window.location.href='404page.html'"><i
+                                    class="fas fa-user-check"></i> Assign</button>
+                        </div>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Pending Approvals</h3>
+                        <div class="list-item">
+                            <div><strong>Tomorrow, 11 AM</strong><br><span class="text-sm text-gray">Mini Cooper - AC
+                                    Repair</span></div>
+                            <div style="display: flex; gap:10px; flex-wrap:wrap;">
+                                <button class="btn btn-success btn-small"
+                                    onclick="window.location.href='404page.html'"><i class="fas fa-check"></i>
+                                    Accept</button>
+                                <button class="btn btn-danger btn-small"
+                                    onclick="window.location.href='404page.html'"><i class="fas fa-times"></i>
+                                    Reject</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-3 mb-30">
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Tomorrow's Load</h3>
+                        <div class="readonly-box"><i class="fas fa-calendar-day text-indigo"></i> 05 Confirmed Bookings
+                        </div>
+                        <button class="btn btn-outline w-100" onclick="window.location.href='404page.html'"><i
+                                class="fas fa-list"></i> View Roster</button>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">VIP Arrivals</h3>
+                        <div class="readonly-box"><i class="fas fa-star text-orange"></i> Mr. Rajesh (S-Class) @ 4 PM
+                        </div>
+                    </div>
+                    <div class="premium-card border-red" data-aos="fade-up">
+                        <h3 class="section-title text-red">Cancelled Today</h3>
+                        <div class="list-item"><span>Hyundai Verna</span><button class="btn btn-outline btn-small"
+                                onclick="window.location.href='404page.html'"><i class="fas fa-phone"></i> Call</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==============================================
+                 TAB 5: TECHNICIANS 
+            =============================================== -->
+            <div id="tab-technicians" class="content-tab">
+                <h3 class="section-title" data-aos="fade-up">Workshop Team</h3>
+                <div class="grid-3 mb-30">
+                    <div class="premium-card text-center" data-aos="fade-up">
+                        <img src="./asset/a27.webp" alt="Tech" class="tech-img">
+                        <h4>Rajesh Kumar</h4>
+                        <p class="text-sm text-gray mb-10">Engine Specialist</p>
+                        <span class="badge warning mb-15">Busy (BMW X5)</span>
+                        <button class="btn btn-outline w-100 btn-small" onclick="window.location.href='404page.html'"><i
+                                class="fas fa-user-circle"></i> View
+                            Profile</button>
+                    </div>
+                    <div class="premium-card text-center" data-aos="fade-up" data-aos-delay="100">
+                        <img src="./asset/a28.webp" alt="Tech" class="tech-img">
+                        <h4>Siva Raman</h4>
+                        <p class="text-sm text-gray mb-10">Detailing Expert</p>
+                        <span class="badge success mb-15">Available</span>
+                        <button class="btn btn-primary w-100 btn-small" onclick="window.location.href='404page.html'"><i
+                                class="fas fa-wrench"></i> Assign
+                            Job</button>
+                    </div>
+                    <div class="premium-card text-center" data-aos="fade-up" data-aos-delay="200">
+                        <img src="./asset/a23.webp" alt="Tech" class="tech-img">
+                        <h4>Arun Prasad</h4>
+                        <p class="text-sm text-gray mb-10">EV Technician</p>
+                        <span class="badge success mb-15">Available</span>
+                        <button class="btn btn-primary w-100 btn-small" onclick="window.location.href='404page.html'"><i
+                                class="fas fa-wrench"></i> Assign
+                            Job</button>
+                    </div>
+                </div>
+
+                <div class="premium-card mb-30" data-aos="fade-up">
+                    <h3 class="section-title">Technician Performance (Monthly)</h3>
+                    <div class="table-wrapper">
+                        <table class="premium-table">
+                            <tr>
+                                <th>Name</th>
+                                <th>Jobs Completed</th>
+                                <th>Avg. Rating</th>
+                                <th>Efficiency</th>
+                            </tr>
+                            <tr>
+                                <td>Rajesh Kumar</td>
+                                <td>45</td>
+                                <td><i class="fas fa-star text-orange"></i> 4.8</td>
+                                <td>92%</td>
+                            </tr>
+                            <tr>
+                                <td>Siva Raman</td>
+                                <td>62</td>
+                                <td><i class="fas fa-star text-orange"></i> 4.9</td>
+                                <td>95%</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="grid-3 mb-30">
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">On Leave Today</h3>
+                        <div class="readonly-box"><i class="fas fa-user-slash text-red"></i> Karthik (Electrician)</div>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Shift Roster</h3>
+                        <div class="readonly-box"><i class="fas fa-sun text-orange"></i> Morning: 08 Techs</div>
+                        <div class="readonly-box"><i class="fas fa-moon text-indigo"></i> Night: 02 Techs</div>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Certifications</h3>
+                        <div class="list-item"><span>EV Handling Training</span><button
+                                class="btn btn-outline btn-small" onclick="window.location.href='404page.html'"><i
+                                    class="fas fa-download"></i> View</button></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==============================================
+                 TAB 6: SETTINGS 
+            =============================================== -->
+            <div id="tab-settings" class="content-tab">
+                <div class="grid-2 mb-30">
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Workshop Details</h3>
+                        <div class="readonly-box"><i class="fas fa-building text-indigo"></i> Premium AutoCare (Main)
+                        </div>
+                        <div class="readonly-box"><i class="fas fa-map-marker-alt text-indigo"></i> Chennai - 600040
+                        </div>
+                        <button class="btn btn-primary mt-10" onclick="window.location.href='404page.html'"><i
+                                class="fas fa-envelope"></i> Request Change</button>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Admin Profile</h3>
+                        <div class="readonly-box"><i class="fas fa-user text-indigo"></i> <span
+                                id="set-name">Admin</span></div>
+                        <div class="readonly-box"><i class="fas fa-envelope text-indigo"></i> <span
+                                id="set-email">admin@autocare.com</span></div>
+                        <button class="btn btn-outline mt-10 w-100" onclick="window.location.href='404page.html'"><i
+                                class="fas fa-lock"></i> Change Password</button>
+                    </div>
+                </div>
+
+                <div class="grid-3 mb-30">
+                    <div class="premium-card border-red" data-aos="fade-up">
+                        <h3 class="section-title text-red">System Controls</h3>
+                        <div class="list-item">
+                            <span>Maintenance Mode</span>
+                            <label class="switch"><input type="checkbox"><span class="slider round"></span></label>
+                        </div>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Payment Gateway</h3>
+                        <div class="list-item"><span>Razorpay Status</span><span class="badge success">Active</span>
+                        </div>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Database Backup</h3>
+                        <p class="text-gray mb-15">Last backup: Today at 2:00 AM</p>
+                        <button class="btn btn-primary w-100" onclick="window.location.href='404page.html'"><i
+                                class="fas fa-database"></i> Trigger Backup</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            let storedEmail = sessionStorage.getItem('userEmail');
+
+            if (!storedEmail) {
+                window.location.replace("login.html");
+                return;
+            }
+
+            let extractedName = storedEmail.split('@')[0];
+            extractedName = extractedName.charAt(0).toUpperCase() + extractedName.slice(1);
+
+            const nameDisplay = document.getElementById("userNameDisplay");
+            const emailDisplay = document.getElementById("userEmailDisplay");
+            const setName = document.getElementById("set-name");
+            const setEmail = document.getElementById("set-email");
+
+            if (nameDisplay) nameDisplay.textContent = extractedName + " (Admin)";
+            if (emailDisplay) emailDisplay.textContent = storedEmail;
+            if (setName) setName.textContent = extractedName;
+            if (setEmail) setEmail.textContent = storedEmail;
+
+            if (typeof AOS !== 'undefined') {
+                AOS.init({ duration: 800, once: true, offset: 50, easing: 'ease-out-cubic' });
+            }
+
+            initAdminChart();
+        });
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            if (!sidebar || !overlay) return;
+
+            sidebar.classList.toggle('mobile-open');
+            if (sidebar.classList.contains('mobile-open')) {
+                overlay.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            } else {
+                overlay.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function switchTab(tabId, element, pageTitle) {
+            document.querySelectorAll('.content-tab').forEach(tab => tab.classList.remove('active-tab'));
+            document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+
+            document.getElementById(tabId).classList.add('active-tab');
+            element.classList.add('active');
+
+            const pageTitleElem = document.getElementById('dynamic-page-title');
+            if (pageTitleElem) pageTitleElem.innerText = pageTitle;
+
+            if (typeof AOS !== 'undefined') { setTimeout(() => { AOS.refresh(); }, 100); }
+            if (window.innerWidth <= 992) { toggleSidebar(); }
+        }
+
+        function logout() {
+            sessionStorage.removeItem('userEmail');
+            window.location.replace("login.html");
+        }
+
+        function initAdminChart() {
+            const ctxLine = document.getElementById('revenueChart');
+            if (ctxLine && typeof Chart !== 'undefined') {
+                new Chart(ctxLine, {
+                    type: 'line',
+                    data: {
+                        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                        datasets: [{
+                            label: 'Revenue (₹)',
+                            data: [25000, 32000, 28000, 45000, 38000, 52000],
+                            borderColor: '#4f46e5',
+                            backgroundColor: 'rgba(79, 70, 229, 0.1)',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.4
+                        }]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        plugins: { legend: { display: false } },
+                        scales: {
+                            y: { beginAtZero: true, grid: { color: '#e2e8f0' } },
+                            x: { grid: { display: false } }
+                        }
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard | Premium AutoCare</title>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="customer_dashboard.css">
+</head>
+
+<body>
+
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+
+    <nav class="sidebar" id="sidebar">
+        <div class="logo-container">
+            <h2 class="logo-text"><img src="./asset/skybluelogo.webp" alt="logo"></h2>
+            <div class="dashboard-badge">Premium Portal</div>
+        </div>
+
+        <div class="nav-sections">
+            <a class="nav-item active" onclick="switchTab('tab-overview', this, 'Dashboard Overview')"><i
+                    class="fas fa-chart-pie"></i> Overview</a>
+            <a class="nav-item" onclick="switchTab('tab-vehicles', this, 'My Garage')"><i class="fas fa-warehouse"></i>
+                My Garage</a>
+            <a class="nav-item" onclick="switchTab('tab-service', this, 'Service History')"><i
+                    class="fas fa-clipboard-list"></i> Service History</a>
+            <a class="nav-item" onclick="switchTab('tab-book', this, 'Book Service')"><i
+                    class="fas fa-calendar-check"></i> Book Service</a>
+            <a class="nav-item" onclick="switchTab('tab-favorites', this, 'Wishlist')"><i class="fas fa-heart"></i>
+                Wishlist</a>
+            <a class="nav-item" onclick="switchTab('tab-settings', this, 'Account Settings')"><i
+                    class="fas fa-user-cog"></i> Settings</a>
+        </div>
+
+        <div class="profile-card">
+            <div class="profile-avatar"><i class="fas fa-user-tie"></i></div>
+            <div class="profile-info">
+                <h4 id="userNameDisplay">Guest User</h4>
+                <p id="userEmailDisplay">guest@autocare.com</p>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="main-content">
+        <header class="topbar">
+            <div class="topbar-left">
+                <div class="menu-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></div>
+                <h2 id="dynamic-page-title" class="page-title">Dashboard Overview</h2>
+            </div>
+            <div class="topbar-right">
+                <button onclick="window.location.href='index.html'" class="header-btn btn-outline"><i
+                        class="fas fa-house"></i> <span>Home</span></button>
+                <button onclick="logout()" class="header-btn logout-btn"><i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span></button>
+            </div>
+        </header>
+
+        <div class="dashboard-body">
+
+
+            <div id="tab-overview" class="content-tab active-tab">
+                <div class="grid-3 mb-30">
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-car stat-icon"></i>
+                        <div class="stat-details">
+                            <h3>Vehicles Owned</h3>
+                            <h2>02</h2>
+                        </div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-wrench stat-icon"></i>
+                        <div class="stat-details">
+                            <h3>Active Services</h3>
+                            <h2>01</h2>
+                        </div>
+                    </div>
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-star stat-icon"></i>
+                        <div class="stat-details">
+                            <h3>Reward Points</h3>
+                            <h2>1,250</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2 mb-30">
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Maintenance Cost Analytics</h3>
+                        <div class="chart-container"><canvas id="expenseChart"></canvas></div>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Current Service Tracker</h3>
+                        <img src="./asset/c1.webp" alt="Workshop" class="full-img">
+                        <h4 class="mt-15">BMW X5 - General Service</h4>
+                        <p class="text-sky mt-10"><i class="fas fa-spinner fa-spin"></i> Engine diagnostics ongoing...
+                        </p>
+                        <div class="progress-bar-container mt-15">
+                            <div class="progress-bar" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-3 mb-30">
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Upcoming Schedule</h3>
+                        <div class="list-item"><span><i class="fas fa-calendar-alt text-sky"></i> 15 Nov</span>
+                            <span>Battery Check</span>
+                        </div>
+                        <div class="list-item"><span><i class="fas fa-calendar-alt text-sky"></i> 02 Dec</span>
+                            <span>Wheel Alignment</span>
+                        </div>
+                    </div>
+                    <div class="premium-card bg-sky" data-aos="fade-up">
+                        <h3 class="section-title text-white">System Alerts</h3>
+                        <p class="text-white mt-10"><i class="fas fa-exclamation-circle"></i> Tesla Insurance expires in
+                            12 days.</p>
+                        <button onclick="window.location.href='404page.html'" class="btn-outline w-100 mt-15 text-white"
+                            style="border-color: white;"><i class="fas fa-shield-alt"></i> Renew Now</button>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Quick Actions</h3>
+                        <button onclick="window.location.href='404page.html'" class="btn-primary w-100 mb-10"><i
+                                class="fas fa-plus"></i> Book Service</button>
+                        <button onclick="window.location.href='404page.html'" class="btn-outline w-100"><i
+                                class="fas fa-phone"></i> Contact Support</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="tab-vehicles" class="content-tab">
+                <h3 class="section-title" data-aos="fade-up">Your Registered Vehicles</h3>
+                <div class="grid-2 mb-30">
+                    <div class="trend-card" data-aos="fade-up">
+                        <img src="./asset/c11.webp" alt="BMW">
+                        <div class="trend-info">
+                            <h4>BMW X5 M-Sport</h4>
+                            <p class="text-gray mb-10">Reg: TN-01-AB-1234</p><button class="btn-small w-100"><i
+                                    class="fas fa-eye"></i> View Details</button>
+                        </div>
+                    </div>
+                    <div class="trend-card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="./asset/c13.webp" alt="Tesla">
+                        <div class="trend-info">
+                            <h4>Tesla Model 3</h4>
+                            <p class="text-gray mb-10">Reg: TN-22-XY-9876</p><button class="btn-small w-100"><i
+                                    class="fas fa-eye"></i> View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="premium-card mb-30" data-aos="fade-up">
+                    <h3 class="section-title">Technical Specifications</h3>
+                    <div class="table-container">
+                        <table class="premium-table">
+                            <tr>
+                                <th>Vehicle</th>
+                                <th>Engine/Motor</th>
+                                <th>Transmission</th>
+                                <th>Fuel Type</th>
+                            </tr>
+                            <tr>
+                                <td>BMW X5</td>
+                                <td>3.0L TwinPower Turbo</td>
+                                <td>8-Speed Automatic</td>
+                                <td>Diesel</td>
+                            </tr>
+                            <tr>
+                                <td>Tesla Model 3</td>
+                                <td>Dual Motor AWD</td>
+                                <td>Single Speed</td>
+                                <td>Electric</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="grid-3 mb-30">
+                    <div class="flip-card" data-aos="fade-up">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front"><i class="fas fa-file-contract text-sky fa-3x mt-20"></i>
+                                <h4 class="mt-15">RC Document</h4>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>Verified</h4>
+                                <p>Valid till 2035</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Avg. Efficiency</h3>
+                        <h2 class="text-sky mt-10">14.5 km/l</h2>
+                        <p class="text-gray mt-5">BMW X5 (Last 30 days)</p>
+                    </div>
+
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Add Vehicle</h3>
+                        <div class="readonly-box"><i class="fas fa-barcode"></i> TN-10-XX-9999</div>
+                        <button onclick="window.location.href='404page.html'" class="btn-primary w-100"><i
+                                class="fas fa-plus"></i> Submit Request</button>
+                    </div>
+                </div>
+
+                <div class="premium-card bg-dark text-white text-center" data-aos="fade-up">
+                    <h2 class="text-white">Thinking of upgrading?</h2>
+                    <p class="mt-10 text-white">Get an instant valuation for your current cars.</p>
+                    <button onclick="window.location.href='404page.html'" class="btn-outline mt-15 text-white"
+                        style="border-color: white;"><i class="fas fa-search-dollar"></i> Check Value</button>
+                </div>
+            </div>
+
+
+            <div id="tab-service" class="content-tab">
+                <div class="premium-card mb-30" data-aos="fade-up">
+                    <h3 class="section-title">Past Service Records</h3>
+                    <div class="table-container">
+                        <table class="premium-table">
+                            <tr>
+                                <th>Job ID</th>
+                                <th>Vehicle</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Amount</th>
+                            </tr>
+                            <tr>
+                                <td>#SRV-1024</td>
+                                <td>Tesla Model 3</td>
+                                <td>Aug 15, 2026</td>
+                                <td><span class="badge success">Completed</span></td>
+                                <td>₹4,500</td>
+                            </tr>
+                            <tr>
+                                <td>#SRV-0988</td>
+                                <td>BMW X5</td>
+                                <td>Jan 10, 2026</td>
+                                <td><span class="badge success">Completed</span></td>
+                                <td>₹12,000</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="grid-2 mb-30">
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Download Invoices</h3>
+                        <div class="list-item"><span><i class="fas fa-file-pdf text-red"></i> Invoice_SRV1024.pdf</span>
+                            <button class="btn-small"><i class="fas fa-download"></i> DL</button>
+                        </div>
+                        <div class="list-item"><span><i class="fas fa-file-pdf text-red"></i> Invoice_SRV0988.pdf</span>
+                            <button class="btn-small"><i class="fas fa-download"></i> DL</button>
+                        </div>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Replaced Parts Log</h3>
+                        <div class="list-item"><span><i class="fas fa-cogs text-sky"></i> Cabin Air Filter (BMW)</span>
+                        </div>
+                        <div class="list-item"><span><i class="fas fa-car-battery text-sky"></i> 12V Battery
+                                (Tesla)</span></div>
+                    </div>
+                </div>
+
+                <div class="grid-3 mb-30">
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Technician Notes</h3>
+                        <p class="text-gray italic">"Brake pads on the BMW X5 will need replacement in the next 5,000
+                            kms."</p>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Warranty Status</h3>
+                        <p class="text-gray">Tesla Battery: <strong class="text-sky">Active (Till 2030)</strong></p>
+                        <p class="text-gray mt-10">BMW Powertrain: <strong class="text-red">Expired</strong></p>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Rate Last Service</h3>
+                        <div class="text-sky mb-15"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                        <button onclick="window.location.href='404page.html'" class="btn-outline w-100"><i
+                                class="fas fa-check"></i> Submit Review</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="tab-book" class="content-tab">
+                <div class="grid-2 mb-30">
+
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">1. Selected Vehicle & Date</h3>
+                        <div class="readonly-box"><i class="fas fa-car"></i> BMW X5 M-Sport</div>
+                        <div class="readonly-box"><i class="fas fa-calendar-alt"></i> 25 Nov 2026</div>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">2. Selected Service Type</h3>
+
+                        <div class="list-item"><span><i class="fas fa-check-circle text-sky"></i> General
+                                Maintenance</span></div>
+                        <div class="list-item"><span><i class="fas fa-check-circle text-sky"></i> AC Servicing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="section-title" data-aos="fade-up">3. Premium Add-ons</h3>
+                <div class="grid-3 mb-30">
+                    <div class="premium-card text-center" data-aos="fade-up"><i
+                            class="fas fa-spray-can text-sky fa-2x mb-10"></i>
+                        <h4>Ceramic Coating</h4>
+                        <p>₹14,999</p>
+                    </div>
+                    <div class="premium-card text-center" data-aos="fade-up"><i
+                            class="fas fa-soap text-sky fa-2x mb-10"></i>
+                        <h4>Deep Interior Spa</h4>
+                        <p>₹2,499</p>
+                    </div>
+                    <div class="premium-card text-center" data-aos="fade-up"><i
+                            class="fas fa-shield-alt text-sky fa-2x mb-10"></i>
+                        <h4>Underbody Anti-Rust</h4>
+                        <p>₹3,999</p>
+                    </div>
+                </div>
+
+                <div class="grid-3 mb-30">
+                    <div class="premium-card p-0" data-aos="fade-up">
+                        <div
+                            style="background:#e2e8f0; height:100%; min-height:200px; display:flex; align-items:center; justify-content:center; flex-direction:column; border-radius:20px;">
+                            <i class="fas fa-map-marker-alt text-sky fa-3x"></i>
+                            <p class="mt-10">Central Workshop</p>
+                        </div>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Estimate Cost</h3>
+                        <div class="flex-row mb-10"><span>Base Service</span><span>₹5,000</span></div>
+                        <div class="flex-row mb-10"><span>Taxes (18%)</span><span>₹900</span></div>
+                        <hr class="mb-10">
+                        <div class="flex-row"><strong>Total</strong><strong class="text-sky">₹5,900</strong></div>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Confirm Booking</h3>
+                        <p class="text-gray mb-15">Pay an advance of ₹999 to confirm slot.</p>
+                        <button onclick="window.location.href='404page.html'" class="btn-primary w-100"><i
+                                class="fas fa-credit-card"></i> Pay & Book</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="tab-favorites" class="content-tab">
+                <h3 class="section-title" data-aos="fade-up">Your Dream Cars</h3>
+                <div class="grid-2 mb-30">
+                    <div class="trend-card" data-aos="fade-up">
+                        <img src="./asset/c33.webp" alt="Porsche">
+                        <div class="trend-info">
+                            <h4>Porsche 911 GT3</h4>
+                            <h3 class="text-sky mt-5 mb-10">₹2.5 Cr</h3><button class="btn-small w-100"><i
+                                    class="fas fa-shopping-cart"></i> Buy Now</button>
+                        </div>
+                    </div>
+
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Requested Test Drive</h3>
+                        <div class="readonly-box"><i class="fas fa-car-side"></i> Porsche 911 GT3</div>
+                        <div class="readonly-box"><i class="fas fa-calendar-check"></i> 10 Dec 2026</div>
+                        <button onclick="window.location.href='404page.html'" class="btn-primary w-100"><i
+                                class="fas fa-road"></i> Status: Confirmed</button>
+                    </div>
+                </div>
+
+
+                <div class="premium-card mb-30" data-aos="fade-up">
+                    <h3 class="section-title">Compare Saved Models</h3>
+
+
+                    <div class="table-wrapper">
+                        <table class="premium-table">
+                            <tr>
+                                <th>Spec</th>
+                                <th>Porsche 911</th>
+                                <th>Audi RS e-tron</th>
+                            </tr>
+                            <tr>
+                                <td>0-100 km/h</td>
+                                <td>3.4s</td>
+                                <td>3.3s</td>
+                            </tr>
+                            <tr>
+                                <td>Power Type</td>
+                                <td>Petrol V6</td>
+                                <td>Full Electric</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+                <div class="grid-3 mb-30">
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Price Drop Alerts</h3>
+                        <p class="text-gray">Get notified when Porsche gets a discount.</p>
+                        <button onclick="window.location.href='404page.html'" class="btn-outline mt-15 w-100"><i
+                                class="fas fa-bell"></i> Alerts On</button>
+                    </div>
+                    <div class="premium-card bg-sky text-white" data-aos="fade-up">
+                        <h3 class="section-title text-white">Pre-approved Loan</h3>
+                        <h2>8.5% ROI</h2>
+                        <p class="mt-10 text-white">From HDFC Bank for luxury vehicles.</p>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Recommended Gear</h3>
+                        <div class="list-item"><span><i class="fas fa-key text-sky"></i> Porsche Keychain</span></div>
+                        <div class="list-item"><span><i class="fas fa-tshirt text-sky"></i> Official Jacket</span></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="tab-settings" class="content-tab">
+                <div class="grid-2 mb-30">
+
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Personal Information</h3>
+                        <div class="readonly-box"><i class="fas fa-user"></i> Guest User</div>
+                        <div class="readonly-box"><i class="fas fa-envelope"></i> guest@autocare.com</div>
+                        <button onclick="window.location.href='404page.html'" class="btn-primary"><i
+                                class="fas fa-user-edit"></i> Request Change</button>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Address Book</h3>
+                        <p class="text-gray mb-15"><strong>Home:</strong> 123, Anna Nagar, Chennai - 600040</p>
+                        <button onclick="window.location.href='404page.html'" class="btn-outline w-100"><i
+                                class="fas fa-map-pin"></i> Manage Address</button>
+                    </div>
+                </div>
+
+                <div class="grid-3 mb-30">
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Password & Security</h3>
+                        <button onclick="window.location.href='404page.html'" class="btn-outline w-100 mb-10"><i
+                                class="fas fa-lock"></i> Change Password</button>
+                        <button onclick="window.location.href='404page.html'" class="btn-outline w-100"><i
+                                class="fas fa-shield-alt"></i> Enable 2FA</button>
+                    </div>
+
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Notifications</h3>
+                        <div class="list-item">
+                            <span>Service Reminders</span>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <div class="list-item">
+                            <span>Offer Emails</span>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <div class="list-item">
+                            <span>SMS Alerts</span>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="premium-card" data-aos="fade-up">
+                        <h3 class="section-title">Connected Accounts</h3>
+                        <div class="list-item"><span><i class="fab fa-google text-red"></i> Google</span> <span
+                                class="text-sky" style="font-size:0.8rem;">Linked</span></div>
+                        <div class="list-item"><span><i class="fab fa-facebook text-sky"></i> Facebook</span> <span
+                                class="text-gray" style="font-size:0.8rem;">Link</span></div>
+                    </div>
+                </div>
+
+                <div class="premium-card text-center border-red" data-aos="fade-up">
+                    <h3 class="section-title text-red">Danger Zone</h3>
+                    <p class="text-gray mb-15">Permanently delete your account and all vehicle data.</p>
+                    <button onclick="window.location.href='404page.html'" class="btn-danger"><i
+                            class="fas fa-trash"></i> Delete Account</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            let storedEmail = sessionStorage.getItem('userEmail');
+
+
+            if (!storedEmail) {
+
+                window.location.replace("login.html");
+                return; 
+            }
+
+
+            let extractedName = storedEmail.split('@')[0];
+            extractedName = extractedName.charAt(0).toUpperCase() + extractedName.slice(1);
+
+
+            const nameDisplay = document.getElementById("userNameDisplay");
+            const emailDisplay = document.getElementById("userEmailDisplay");
+            const setName = document.getElementById("set-name");
+            const setEmail = document.getElementById("set-email");
+
+            if (nameDisplay) nameDisplay.textContent = extractedName;
+            if (emailDisplay) emailDisplay.textContent = storedEmail;
+            if (setName) setName.textContent = extractedName;
+            if (setEmail) setEmail.textContent = storedEmail;
+
+
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 50,
+                    easing: 'ease-out-cubic'
+                });
+            }
+
+
+            initChart();
+        });
+
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            if (!sidebar || !overlay) return;
+
+            sidebar.classList.toggle('mobile-open');
+
+            if (sidebar.classList.contains('mobile-open')) {
+                overlay.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            } else {
+                overlay.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+
+        function switchTab(tabId, element, pageTitle) {
+            document.querySelectorAll('.content-tab').forEach(tab => tab.classList.remove('active-tab'));
+            document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+
+            document.getElementById(tabId).classList.add('active-tab');
+            element.classList.add('active');
+
+            const pageTitleElem = document.getElementById('dynamic-page-title');
+            if (pageTitleElem) pageTitleElem.innerText = pageTitle;
+
+            if (typeof AOS !== 'undefined') {
+                setTimeout(() => { AOS.refresh(); }, 100);
+            }
+
+            if (window.innerWidth <= 992) {
+                toggleSidebar();
+            }
+        }
+
+
+        function logout() {
+            sessionStorage.removeItem('userEmail');
+            window.location.replace("login.html");
+        }
+
+
+        function initChart() {
+            const ctx = document.getElementById('expenseChart');
+            if (ctx && typeof Chart !== 'undefined') {
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+                        datasets: [{
+                            label: 'Cost (₹)',
+                            data: [12000, 8500, 4000, 15000, 4500, 8000],
+                            backgroundColor: '#00b4db',
+                            borderRadius: 6,
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { display: false } },
+                        scales: {
+                            y: { beginAtZero: true, grid: { color: '#e2e8f0' }, ticks: { color: '#64748b' } },
+                            x: { grid: { display: false }, ticks: { color: '#64748b', font: { weight: 'bold' } } }
+                        }
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>

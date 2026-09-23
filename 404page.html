@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <style>
+        :root {
+            --sky-blue: #00b4db;
+            --dark-blue: #0083b0;
+            --white: #ffffff;
+            --dark-bg: #030712;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--white);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+
+        #particles-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+
+        .glow-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, rgba(0, 180, 219, 0.15) 0%, rgba(3, 7, 18, 0) 70%);
+            z-index: 2;
+        }
+
+
+        .error-container {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 0 5%;
+            max-width: 800px;
+        }
+
+
+        .error-code {
+            font-size: clamp(8rem, 20vw, 15rem);
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--white) 0%, #64748b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            animation: breatheZoom 4s infinite alternate ease-in-out;
+        }
+
+        @keyframes breatheZoom {
+            0% {
+                transform: scale(1);
+                text-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            }
+
+            100% {
+                transform: scale(1.05);
+                text-shadow: 0 30px 60px rgba(0, 180, 219, 0.2);
+            }
+        }
+
+
+        .error-title {
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: var(--sky-blue);
+        }
+
+        .error-desc {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: #cbd5e1;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--sky-blue), var(--dark-blue));
+            color: var(--white);
+            box-shadow: 0 10px 25px rgba(0, 180, 219, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 180, 219, 0.5);
+        }
+
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--white);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--sky-blue);
+            transform: translateY(-3px);
+        }
+
+        .btn i {
+            transition: transform 0.3s ease;
+        }
+
+        .btn-primary:hover i {
+            transform: translateX(-5px);
+        }
+
+        .btn-secondary:hover i {
+            transform: translateX(5px);
+        }
+
+
+        @media (max-width: 576px) {
+            .btn-group {
+                flex-direction: column;
+                width: 100%;
+                gap: 15px;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="glow-bg"></div>
+
+
+    <canvas id="particles-canvas"></canvas>
+
+
+    <div class="error-container">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-title">Looks like you took a wrong turn.</h2>
+        <p class="error-desc">The road you are looking for has been moved, deleted, or simply doesn't exist in our map.
+        </p>
+
+        <div class="btn-group">
+
+            <button onclick="window.history.back()" class="btn btn-primary">
+                <i class="fa-solid fa-arrow-left"></i> Go Back
+            </button>
+
+
+            <a href="index.html" class="btn btn-secondary">
+                Back to Home <i class="fa-solid fa-house"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            gsap.from(".error-code", { opacity: 0, scale: 0.5, duration: 1.2, ease: "back.out(1.7)" });
+            gsap.from(".error-title", { opacity: 0, y: 30, duration: 0.8, delay: 0.5, ease: "power3.out" });
+            gsap.from(".error-desc", { opacity: 0, y: 30, duration: 0.8, delay: 0.7, ease: "power3.out" });
+            gsap.from(".btn-group", { opacity: 0, y: 30, duration: 0.8, delay: 0.9, ease: "power3.out" });
+
+
+            const canvas = document.getElementById("particles-canvas");
+            const ctx = canvas.getContext("2d");
+
+            let particlesArray = [];
+            let width, height;
+
+
+            function setCanvasSize() {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            }
+            setCanvasSize();
+            window.addEventListener('resize', setCanvasSize);
+
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * width;
+                    this.y = Math.random() * height;
+                    this.size = Math.random() * 2.5 + 0.5; 
+                    this.speedX = (Math.random() * 1) - 0.5; 
+                    this.speedY = (Math.random() * -1) - 0.5;
+                    this.opacity = Math.random() * 0.5 + 0.1;
+                }
+                update() {
+                    this.x += this.speedX;
+                    this.y += this.speedY;
+
+
+                    if (this.y < 0) {
+                        this.y = height;
+                        this.x = Math.random() * width;
+                    }
+                    if (this.x > width || this.x < 0) {
+                        this.speedX = -this.speedX;
+                    }
+                }
+                draw() {
+                    ctx.fillStyle = `rgba(0, 180, 219, ${this.opacity})`;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+
+
+            function initParticles() {
+                particlesArray = [];
+                let numberOfParticles = (width * height) / 9000; 
+                for (let i = 0; i < numberOfParticles; i++) {
+                    particlesArray.push(new Particle());
+                }
+            }
+
+
+            function animateParticles() {
+                ctx.clearRect(0, 0, width, height);
+                for (let i = 0; i < particlesArray.length; i++) {
+                    particlesArray[i].update();
+                    particlesArray[i].draw();
+                }
+                requestAnimationFrame(animateParticles);
+            }
+
+            initParticles();
+            animateParticles();
+        });
+    </script>
+</body>
+
+</html>

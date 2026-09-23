@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="ta">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarZone - Automotive Platform</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="common.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="loader-circle"></div>
+        <span class="loader-text"><img src="./asset/skybluelogo.webp" alt="logo" class="logo1"></span>
+    </div>
+
+    <div class="top-bar" id="topBar">
+        <div class="marquee-container">
+            <p class="marquee-text">🚀 Special Offer: Get Complete Details on New Car Models! 🌟 Premium Service
+                Available 24/7. <a href="404page.html">Learn More</a></p>
+        </div>
+        <span class="close-topbar" id="closeTopbar">&times;</span>
+    </div>
+
+
+    <header class="header" id="header">
+        <nav class="navbar">
+
+            <a href="index.html" class="logo" data-aos="fade-right" data-aos-duration="1000">
+                <img src="./asset/skybluelogo.webp" alt="logo">
+            </a>
+
+
+            <div class="nav-content">
+                <ul class="nav-menu">
+                    <li data-aos="fade-down" data-aos-delay="600"><a href="index.html" class="nav-link active">Home</a>
+                    </li>
+                    <li data-aos="fade-down" data-aos-delay="700"><a href="about.html" class="nav-link">About</a></li>
+                    <li data-aos="fade-down" data-aos-delay="800"><a href="service.html" class="nav-link">Service</a>
+                    </li>
+                    <li data-aos="fade-down" data-aos-delay="900"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li data-aos="fade-down" data-aos-delay="1000"><a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="nav-buttons">
+                    <a href="login.html" class="btn login-btn" data-aos="fade-up" data-aos-delay="600">Login</a>
+                    <a href="signup.html" class="btn signup-btn gradient-bg" data-aos="fade-up"
+                        data-aos-delay="700">Sign Up</a>
+                </div>
+            </div>
+
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <section class="hero-section" id="hero">
+
+
+        <div class="hero-slider">
+
+            <div class="hero-slide active">
+                <img src="./asset/c1.webp" alt="Premium Car" class="slide-bg">
+                <div class="slide-content">
+                    <span class="sub-heading">Drive Beyond Expectations</span>
+                    <h1 class="main-heading">Your Journey.<br><span class="gradient-text">Your Car.</span> Your
+                        Platform.</h1>
+                    <p class="description">Experience unparalleled luxury and performance. Discover the ultimate
+                        automotive platform designed exactly for your lifestyle.</p>
+                    <div class="hero-btns">
+                        <a href="404page.html" class="btn gradient-bg">Explore Cars</a>
+                        <a href="404page.html" class="btn glass-btn">Book a Test Drive</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="hero-slide">
+                <img src="./asset/c2.webp" alt="Sports Car" class="slide-bg">
+                <div class="slide-content">
+                    <span class="sub-heading">Unleash the Power</span>
+                    <h1 class="main-heading">Feel the <span class="gradient-text">Adrenaline</span><br>Every Second.
+                    </h1>
+                    <p class="description">Get behind the wheel of the world's most dynamic sports cars. Performance
+                        that speaks for itself on every single road.</p>
+                    <div class="hero-btns">
+                        <a href="404page.html" class="btn gradient-bg">View Collection</a>
+                        <a href="404page.html" class="btn glass-btn">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="hero-glass-panel">
+            <div class="panel-tabs">
+                <button class="tab-btn active">Buy</button>
+                <button class="tab-btn">Sell</button>
+                <button class="tab-btn">Service</button>
+                <button class="tab-btn">Rent</button>
+            </div>
+            <div class="panel-search-area">
+                <div class="input-wrapper">
+                    <input type="text" id="searchInput" placeholder="Search Make, Model...">
+                    <span class="error-msg" id="searchError">Please write anything to search!</span>
+                </div>
+                <button class="search-btn gradient-bg" id="searchBtn"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+
+
+        <div class="hero-bottom-specs">
+            <div class="spec-item">
+                <i class="fa-solid fa-gauge-high"></i>
+                <span>Performance</span>
+            </div>
+            <div class="spec-item">
+                <i class="fa-solid fa-battery-full"></i>
+                <span>Range</span>
+            </div>
+            <div class="spec-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Safety</span>
+            </div>
+            <div class="spec-item">
+                <i class="fa-solid fa-microchip"></i>
+                <span>Technology</span>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <section class="explore-category-section" id="explore-drives" data-aos="fade-up" data-aos-duration="1000">
+
+        <div class="explore-header">
+            <h2 class="section-title">Explore <span class="gradient-text">Every Drive</span></h2>
+            <p class="section-subtitle">Discover the perfect category that matches your lifestyle and ambition.</p>
+        </div>
+
+
+        <div class="explore-scroll-wrapper">
+            <div class="explore-scroll-track">
+
+
+                <a href="javascript:void(0)" class="explore-pill-card">
+                    <div class="explore-popup-img">
+                        <img src="./asset/c3.webp" alt="SUV">
+                    </div>
+                    <div class="explore-card-info">
+                        <div class="explore-icon"><i class="fa-solid fa-car-side"></i></div>
+                        <span>SUV</span>
+                    </div>
+                </a>
+
+                <a href="javascript:void(0)" class="explore-pill-card">
+                    <div class="explore-popup-img">
+                        <img src="./asset/c4.webp" alt="Sedan">
+                    </div>
+                    <div class="explore-card-info">
+                        <div class="explore-icon"><i class="fa-solid fa-car"></i></div>
+                        <span>Sedan</span>
+                    </div>
+                </a>
+
+                <a href="javascript:void(0)" class="explore-pill-card">
+                    <div class="explore-popup-img">
+                        <img src="./asset/c5.webp" alt="Electric">
+                    </div>
+                    <div class="explore-card-info">
+                        <div class="explore-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+                        <span>Electric</span>
+                    </div>
+                </a>
+
+                <a href="javascript:void(0)" class="explore-pill-card">
+                    <div class="explore-popup-img">
+                        <img src="./asset/c6.webp" alt="Luxury">
+                    </div>
+                    <div class="explore-card-info">
+                        <div class="explore-icon"><i class="fa-solid fa-crown"></i></div>
+                        <span>Luxury</span>
+                    </div>
+                </a>
+
+                <a href="javascript:void(0)" class="explore-pill-card">
+                    <div class="explore-popup-img">
+                        <img src="./asset/c7.webp" alt="Sports">
+                    </div>
+                    <div class="explore-card-info">
+                        <div class="explore-icon"><i class="fa-solid fa-flag-checkered"></i></div>
+                        <span>Sports</span>
+                    </div>
+                </a>
+
+                <a href="javascript:void(0)" class="explore-pill-card">
+                    <div class="explore-popup-img">
+                        <img src="./asset/c1.webp" alt="Hybrid">
+                    </div>
+                    <div class="explore-card-info">
+                        <div class="explore-icon"><i class="fa-solid fa-leaf"></i></div>
+                        <span>Hybrid</span>
+                    </div>
+                </a>
+
+                <a href="javascript:void(0)" class="explore-pill-card">
+                    <div class="explore-popup-img">
+                        <img src="./asset/c8.webp" alt="Commercial">
+                    </div>
+                    <div class="explore-card-info">
+                        <div class="explore-icon"><i class="fa-solid fa-truck"></i></div>
+                        <span>Commercial</span>
+                    </div>
+                </a>
+
+                <a href="javascript:void(0)" class="explore-pill-card">
+                    <div class="explore-popup-img">
+                        <img src="./asset/c9.webp" alt="Certified Used">
+                    </div>
+                    <div class="explore-card-info">
+                        <div class="explore-icon"><i class="fa-solid fa-award"></i></div>
+                        <span>Certified Used</span>
+                    </div>
+                </a>
+
+
+                <a href="javascript:void(0)" class="explore-pill-card">
+                    <div class="explore-popup-img"><img src="./asset/c3.webp" alt="SUV"></div>
+                    <div class="explore-card-info">
+                        <div class="explore-icon"><i class="fa-solid fa-car-side"></i></div><span>SUV</span>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" class="explore-pill-card">
+                    <div class="explore-popup-img"><img src="./asset/c4.webp" alt="Sedan"></div>
+                    <div class="explore-card-info">
+                        <div class="explore-icon"><i class="fa-solid fa-car"></i></div><span>Sedan</span>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" class="explore-pill-card">
+                    <div class="explore-popup-img"><img src="./asset/c5.webp" alt="Electric"></div>
+                    <div class="explore-card-info">
+                        <div class="explore-icon"><i class="fa-solid fa-bolt-lightning"></i></div><span>Electric</span>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" class="explore-pill-card">
+                    <div class="explore-popup-img"><img src="./asset/c6.webp" alt="Luxury"></div>
+                    <div class="explore-card-info">
+                        <div class="explore-icon"><i class="fa-solid fa-crown"></i></div><span>Luxury</span>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" class="explore-pill-card">
+                    <div class="explore-popup-img"><img src="./asset/c7.webp" alt="Sports"></div>
+                    <div class="explore-card-info">
+                        <div class="explore-icon"><i class="fa-solid fa-flag-checkered"></i></div><span>Sports</span>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" class="explore-pill-card">
+                    <div class="explore-popup-img"><img src="./asset/c1.webp" alt="Hybrid"></div>
+                    <div class="explore-card-info">
+                        <div class="explore-icon"><i class="fa-solid fa-leaf"></i></div><span>Hybrid</span>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" class="explore-pill-card">
+                    <div class="explore-popup-img"><img src="./asset/c8.webp" alt="Commercial"></div>
+                    <div class="explore-card-info">
+                        <div class="explore-icon"><i class="fa-solid fa-truck"></i></div><span>Commercial</span>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" class="explore-pill-card">
+                    <div class="explore-popup-img"><img src="./asset/c9.webp" alt="Certified Used"></div>
+                    <div class="explore-card-info">
+                        <div class="explore-icon"><i class="fa-solid fa-award"></i></div><span>Certified Used</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="timeline-section" id="journey-timeline">
+
+        <div class="timeline-header" data-aos="fade-up">
+            <h2 class="double-gradient-heading">From Search to Steering Wheel</h2>
+            <p class="timeline-subtitle">Your seamless journey to driving your dream car.</p>
+        </div>
+
+        <div class="timeline-container">
+
+
+            <div class="snake-line-wrapper">
+                <svg class="snake-svg" viewBox="0 0 100 1000" preserveAspectRatio="none">
+                    <path class="snake-track"
+                        d="M 50,0 C 90,100 90,100 50,200 C 10,300 10,300 50,400 C 90,500 90,500 50,600 C 10,700 10,700 50,800 C 90,900 90,900 50,1000"
+                        fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="3" />
+                    <path class="snake-fill" id="snake-fill"
+                        d="M 50,0 C 90,100 90,100 50,200 C 10,300 10,300 50,400 C 90,500 90,500 50,600 C 10,700 10,700 50,800 C 90,900 90,900 50,1000"
+                        fill="none" stroke="url(#snake-gradient)" stroke-width="4" />
+                    <defs>
+                        <linearGradient id="snake-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#00B4DB" />
+                            <stop offset="100%" stop-color="#0083B0" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+
+            <div class="mobile-straight-line">
+                <div class="mobile-line-fill" id="mobile-fill"></div>
+            </div>
+
+
+            <div class="time-item left-item">
+                <div class="time-dot"><i class="fa-solid fa-compass"></i></div>
+                <div class="time-card">
+                    <div class="watermark">01</div>
+                    <h3>Discover</h3>
+                    <p>Explore our vast collection of premium vehicles and compare top features.</p>
+                </div>
+            </div>
+
+
+            <div class="time-item right-item">
+                <div class="time-dot"><i class="fa-solid fa-scale-balanced"></i></div>
+                <div class="time-card">
+                    <div class="watermark">02</div>
+                    <h3>Compare</h3>
+                    <p>Analyze performance, pricing, and technology to find your exact match.</p>
+                </div>
+            </div>
+
+
+            <div class="time-item left-item">
+                <div class="time-dot"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                <div class="time-card">
+                    <div class="watermark">03</div>
+                    <h3>Inspect</h3>
+                    <p>Review comprehensive vehicle history, condition reports, and 3D tours.</p>
+                </div>
+            </div>
+
+
+            <div class="time-item right-item">
+                <div class="time-dot"><i class="fa-regular fa-calendar-check"></i></div>
+                <div class="time-card">
+                    <div class="watermark">04</div>
+                    <h3>Book</h3>
+                    <p>Schedule a test drive at your convenience or reserve your car entirely online.</p>
+                </div>
+            </div>
+
+
+            <div class="time-item left-item">
+                <div class="time-dot"><i class="fa-solid fa-car-side"></i></div>
+                <div class="time-card">
+                    <div class="watermark">05</div>
+                    <h3>Drive</h3>
+                    <p>Complete your secure purchase, grab the keys, and hit the open road.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="expand-services-section" id="services">
+
+        <div class="expand-header">
+            <h2 class="gradient-heading">One Platform. <span class="dark-text">Every Automotive Need.</span></h2>
+            <p class="expand-subtitle">Hover or tap to explore our comprehensive automotive solutions.</p>
+        </div>
+
+        <div class="expand-container">
+
+
+            <div class="expand-card">
+                <img src="./asset/c9.webp" alt="Buy Cars" class="card-bg">
+                <div class="card-overlay"></div>
+
+                <div class="card-content">
+                    <div class="card-title-wrap">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <h3>BUY</h3>
+                    </div>
+                    <ul class="card-list">
+                        <li><i class="fa-solid fa-car-side"></i> New Cars</li>
+                        <li><i class="fa-solid fa-car"></i> Used Cars</li>
+                        <li><i class="fa-solid fa-award"></i> Certified Vehicles</li>
+                        <li><i class="fa-solid fa-calculator"></i> EMI Options</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="expand-card">
+                <img src="./asset/c13.webp" alt="Sell Cars" class="card-bg">
+                <div class="card-overlay"></div>
+
+                <div class="card-content">
+                    <div class="card-title-wrap">
+                        <i class="fa-solid fa-tags"></i>
+                        <h3>SELL</h3>
+                    </div>
+                    <ul class="card-list">
+                        <li><i class="fa-solid fa-magnifying-glass-dollar"></i> Free Valuation</li>
+                        <li><i class="fa-solid fa-house-circle-check"></i> Home Inspection</li>
+                        <li><i class="fa-solid fa-bolt"></i> Instant Payment</li>
+                        <li><i class="fa-solid fa-file-signature"></i> RC Transfer</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="expand-card">
+                <img src="./asset/c31.webp" alt="Service" class="card-bg">
+                <div class="card-overlay"></div>
+
+                <div class="card-content">
+                    <div class="card-title-wrap">
+                        <i class="fa-solid fa-wrench"></i>
+                        <h3>SERVICE</h3>
+                    </div>
+                    <ul class="card-list">
+                        <li><i class="fa-solid fa-calendar-check"></i> Service Booking</li>
+                        <li><i class="fa-solid fa-screwdriver-wrench"></i> Maintenance</li>
+                        <li><i class="fa-solid fa-gear"></i> Spare Parts</li>
+                        <li><i class="fa-solid fa-truck-pickup"></i> Road Assistance</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="expand-card">
+                <img src="./asset/c39.webp" alt="Rent" class="card-bg">
+                <div class="card-overlay"></div>
+
+                <div class="card-content">
+                    <div class="card-title-wrap">
+                        <i class="fa-solid fa-key"></i>
+                        <h3>RENT</h3>
+                    </div>
+                    <ul class="card-list">
+                        <li><i class="fa-solid fa-calendar-days"></i> Daily Rentals</li>
+                        <li><i class="fa-solid fa-calendar-week"></i> Long-term Lease</li>
+                        <li><i class="fa-solid fa-plane-arrival"></i> Airport Transfer</li>
+                        <li><i class="fa-solid fa-car-burst"></i> Replacement Cars</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="expand-card">
+                <img src="./asset/c18.webp" alt="Insurance" class="card-bg">
+                <div class="card-overlay"></div>
+
+                <div class="card-content">
+                    <div class="card-title-wrap">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>INSURANCE</h3>
+                    </div>
+                    <ul class="card-list">
+                        <li><i class="fa-solid fa-file-contract"></i> New Policy</li>
+                        <li><i class="fa-solid fa-arrows-rotate"></i> Renewals</li>
+                        <li><i class="fa-solid fa-hand-holding-dollar"></i> Claim Support</li>
+                        <li><i class="fa-solid fa-car-on"></i> Add-on Covers</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="editorial-featured-section" id="featured">
+
+        <div class="editorial-header">
+            <h2 class="gradient-heading">Machines Worth <span class="dark-text">Exploring</span></h2>
+            <p class="editorial-subtitle">Handpicked masterpieces of automotive engineering, curated just for you.</p>
+        </div>
+
+        <div class="editorial-container">
+
+
+            <div class="editorial-left">
+
+                <div class="editorial-bg-text" id="ed-bg-text">SPORTS</div>
+
+
+                <div class="main-img-wrapper">
+                    <img src="./asset/c13.webp" alt="Featured Car" id="ed-main-img" class="ed-main-img">
+                </div>
+
+
+                <div class="ed-thumbnails">
+                    <div class="ed-thumb active" data-index="0">
+                        <img src="./asset/c13.webp" alt="Thumb 1">
+                    </div>
+                    <div class="ed-thumb" data-index="1">
+                        <img src="./asset/c6.webp" alt="Thumb 2">
+                    </div>
+                    <div class="ed-thumb" data-index="2">
+                        <img src="./asset/c19.webp" alt="Thumb 3">
+                    </div>
+                    <div class="ed-thumb" data-index="3">
+                        <img src="./asset/c20.webp" alt="Thumb 4">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="editorial-right" id="ed-details">
+                <h3 class="ed-model" id="ed-model">Audi R8 V10 Performance</h3>
+                <div class="ed-price" id="ed-price">$142,000</div>
+
+                <div class="ed-specs-grid">
+                    <div class="ed-spec-item">
+                        <i class="fa-solid fa-engine"></i>
+                        <span>Engine</span>
+                        <strong id="ed-engine">5.2L V10 Gas</strong>
+                    </div>
+                    <div class="ed-spec-item">
+                        <i class="fa-solid fa-gauge-high"></i>
+                        <span>Mileage</span>
+                        <strong id="ed-mileage">14 City / 23 Hwy</strong>
+                    </div>
+                    <div class="ed-spec-item">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Transmission</span>
+                        <strong id="ed-trans">7-Speed Automatic</strong>
+                    </div>
+                    <div class="ed-spec-item">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Safety Rating</span>
+                        <strong id="ed-safety">5-Star NHTSA</strong>
+                    </div>
+                </div>
+
+                <a href="404page.html" class="ed-action-btn gradient-bg">
+                    <span>View Full Specs</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="compare-section" id="compare">
+
+
+        <div class="compare-header">
+            <h2 class="gradient-heading">Compare Before <span class="dark-text">You Drive</span></h2>
+            <p class="compare-subtitle">Side-by-side analysis to help you make the perfect choice.</p>
+        </div>
+
+        <div class="compare-container">
+
+
+            <div class="compare-showcase">
+
+                <div class="compare-car car-left">
+                    <div class="car-img-box">
+                        <img src="./asset/c5.webp" alt="Vehicle A" class="flip-img">
+                    </div>
+                    <h3 class="car-name">Tesla Model 3</h3>
+                    <div class="car-price">$39,000</div>
+                </div>
+
+
+                <div class="vs-badge">
+                    <div class="vs-glow"></div>
+                    <span>VS</span>
+                </div>
+
+
+                <div class="compare-car car-right">
+                    <div class="car-img-box">
+                        <img src="./asset/c21.webp" alt="Vehicle B">
+                    </div>
+                    <h3 class="car-name">Polestar 2</h3>
+                    <div class="car-price">$48,400</div>
+                </div>
+            </div>
+
+
+            <div class="compare-specs-list">
+
+                <div class="spec-row">
+                    <div class="spec-val val-left">283 hp</div>
+                    <div class="spec-label">
+                        <div class="icon-circle"><i class="fa-solid fa-bolt"></i></div>
+                        <span>Power</span>
+                    </div>
+                    <div class="spec-val val-right">299 hp</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-val val-left">272 miles</div>
+                    <div class="spec-label">
+                        <div class="icon-circle"><i class="fa-solid fa-battery-full"></i></div>
+                        <span>Range</span>
+                    </div>
+                    <div class="spec-val val-right">270 miles</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-val val-left">5.8s <small>(0-60)</small></div>
+                    <div class="spec-label">
+                        <div class="icon-circle"><i class="fa-solid fa-gauge-high"></i></div>
+                        <span>Acceleration</span>
+                    </div>
+                    <div class="spec-val val-right">5.9s <small>(0-60)</small></div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-val val-left">5-Star</div>
+                    <div class="spec-label">
+                        <div class="icon-circle"><i class="fa-solid fa-shield-halved"></i></div>
+                        <span>Safety</span>
+                    </div>
+                    <div class="spec-val val-right">5-Star</div>
+                </div>
+
+                <div class="spec-row">
+                    <div class="spec-val val-left">Autopilot</div>
+                    <div class="spec-label">
+                        <div class="icon-circle"><i class="fa-solid fa-microchip"></i></div>
+                        <span>Top Feature</span>
+                    </div>
+                    <div class="spec-val val-right">Pilot Assist</div>
+                </div>
+
+            </div>
+
+
+            <div class="compare-action">
+                <a href="404page.html" class="compare-btn gradient-bg">
+                    <span>Compare More Vehicles</span>
+                    <i class="fa-solid fa-code-compare"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <section class="tech-spotlight-section" id="technology">
+
+        <div class="tech-header">
+            <h2 class="gradient-heading">Built Around <span class="white-text">Smarter Mobility</span></h2>
+            <p class="tech-subtitle">Experience the next generation of automotive innovation and intelligence.</p>
+        </div>
+
+        <div class="tech-container">
+
+
+            <div class="tech-car-wrapper">
+
+                <div class="tech-glow-circle"></div>
+
+                <img src="./asset/c22.webp" alt="Futuristic Car" class="tech-main-car">
+
+
+                <div class="hotspot hs-1">
+                    <div class="hs-dot">
+                        <div class="hs-ping"></div>
+                    </div>
+                    <div class="hs-panel panel-left">
+                        <i class="fa-solid fa-microchip"></i>
+                        <h4>AI Assistance</h4>
+                        <p>Proactive driving suggestions and intelligent voice control system.</p>
+                    </div>
+                </div>
+
+
+                <div class="hotspot hs-2">
+                    <div class="hs-dot">
+                        <div class="hs-ping"></div>
+                    </div>
+                    <div class="hs-panel panel-top">
+                        <i class="fa-solid fa-wifi"></i>
+                        <h4>Connected Car</h4>
+                        <p>Seamless 5G integration with real-time OTA cloud updates.</p>
+                    </div>
+                </div>
+
+
+                <div class="hotspot hs-3">
+                    <div class="hs-dot">
+                        <div class="hs-ping"></div>
+                    </div>
+                    <div class="hs-panel panel-right">
+                        <i class="fa-solid fa-camera"></i>
+                        <h4>360° Camera</h4>
+                        <p>Complete environmental awareness with HD surround view sensing.</p>
+                    </div>
+                </div>
+
+
+                <div class="hotspot hs-4">
+                    <div class="hs-dot">
+                        <div class="hs-ping"></div>
+                    </div>
+                    <div class="hs-panel panel-left">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <h4>Smart Navigation</h4>
+                        <p>AI-driven routing with live traffic and weather prediction.</p>
+                    </div>
+                </div>
+
+
+                <div class="hotspot hs-5">
+                    <div class="hs-dot">
+                        <div class="hs-ping"></div>
+                    </div>
+                    <div class="hs-panel panel-right">
+                        <i class="fa-solid fa-bolt"></i>
+                        <h4>EV Technology</h4>
+                        <p>Ultra-fast charging with smart battery thermal management.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="mobile-tech-list">
+                <div class="m-tech-card">
+                    <i class="fa-solid fa-microchip"></i>
+                    <div class="m-tech-info">
+                        <h4>AI Assistance</h4>
+                        <p>Intelligent voice control system.</p>
+                    </div>
+                </div>
+                <div class="m-tech-card">
+                    <i class="fa-solid fa-wifi"></i>
+                    <div class="m-tech-info">
+                        <h4>Connected Car</h4>
+                        <p>Seamless 5G & real-time updates.</p>
+                    </div>
+                </div>
+                <div class="m-tech-card">
+                    <i class="fa-solid fa-camera"></i>
+                    <div class="m-tech-info">
+                        <h4>360° Camera</h4>
+                        <p>HD surround view environmental sensing.</p>
+                    </div>
+                </div>
+                <div class="m-tech-card">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <div class="m-tech-info">
+                        <h4>Smart Navigation</h4>
+                        <p>Live traffic and weather prediction.</p>
+                    </div>
+                </div>
+                <div class="m-tech-card">
+                    <i class="fa-solid fa-bolt"></i>
+                    <div class="m-tech-info">
+                        <h4>EV Technology</h4>
+                        <p>Ultra-fast charging & battery management.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="customer-journey-section" id="journey">
+
+        <div class="journey-header">
+            <h2 class="gradient-heading">Real Drives. <span class="dark-text">Real Experiences.</span></h2>
+            <p class="journey-subtitle">Join thousands of happy drivers who found their perfect match with CarZone.</p>
+        </div>
+
+
+        <div class="journey-stats-container">
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fa-solid fa-car-side"></i></div>
+                <h3 class="count-val" data-target="15400">0</h3>
+                <p>Vehicles Sold</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fa-solid fa-key"></i></div>
+                <h3 class="count-val" data-target="32000">0</h3>
+                <p>Test Drives</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fa-solid fa-wrench"></i></div>
+                <h3 class="count-val" data-target="28500">0</h3>
+                <p>Service Bookings</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fa-solid fa-face-smile"></i></div>
+                <h3 class="count-val" data-target="15000">0</h3>
+                <p>Happy Customers</p>
+            </div>
+        </div>
+
+
+        <div class="testimonial-strip-wrapper">
+            <div class="testimonial-track">
+
+
+                <div class="testi-card">
+                    <div class="testi-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star-half-stroke"></i>
+                        <span>4.9/5</span>
+                    </div>
+                    <p class="testi-text">"Found my perfect SUV in minutes! The interface is incredibly smooth and the
+                        filters are super accurate."</p>
+                    <h4 class="testi-author">- Michael R.</h4>
+                </div>
+                <div class="testi-card">
+                    <div class="testi-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                        <span>5.0/5</span>
+                    </div>
+                    <p class="testi-text">"The 360° tour and detailed specs helped me make a confident decision without
+                        visiting the showroom."</p>
+                    <h4 class="testi-author">- Sarah L.</h4>
+                </div>
+                <div class="testi-card">
+                    <div class="testi-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                        <span>5.0/5</span>
+                    </div>
+                    <p class="testi-text">"Booking a test drive was seamless. Best automotive platform I've ever used.
+                        Highly recommended!"</p>
+                    <h4 class="testi-author">- David K.</h4>
+                </div>
+                <div class="testi-card">
+                    <div class="testi-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star-half-stroke"></i>
+                        <span>4.8/5</span>
+                    </div>
+                    <p class="testi-text">"Sold my old sedan and bought a new EV seamlessly. The transparency in pricing
+                        is unmatched."</p>
+                    <h4 class="testi-author">- Emily T.</h4>
+                </div>
+
+
+                <div class="testi-card">
+                    <div class="testi-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star-half-stroke"></i>
+                        <span>4.9/5</span>
+                    </div>
+                    <p class="testi-text">"Found my perfect SUV in minutes! The interface is incredibly smooth and the
+                        filters are super accurate."</p>
+                    <h4 class="testi-author">- Michael R.</h4>
+                </div>
+                <div class="testi-card">
+                    <div class="testi-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                        <span>5.0/5</span>
+                    </div>
+                    <p class="testi-text">"The 360° tour and detailed specs helped me make a confident decision without
+                        visiting the showroom."</p>
+                    <h4 class="testi-author">- Sarah L.</h4>
+                </div>
+                <div class="testi-card">
+                    <div class="testi-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                        <span>5.0/5</span>
+                    </div>
+                    <p class="testi-text">"Booking a test drive was seamless. Best automotive platform I've ever used.
+                        Highly recommended!"</p>
+                    <h4 class="testi-author">- David K.</h4>
+                </div>
+                <div class="testi-card">
+                    <div class="testi-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star-half-stroke"></i>
+                        <span>4.8/5</span>
+                    </div>
+                    <p class="testi-text">"Sold my old sedan and bought a new EV seamlessly. The transparency in pricing
+                        is unmatched."</p>
+                    <h4 class="testi-author">- Emily T.</h4>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="final-cta-section" id="cta">
+
+
+        <div class="cta-bg-wrapper">
+            <img src="./asset/c17.webp" alt="Cinematic Car" class="cta-bg-img" id="cta-parallax">
+
+            <div class="cta-overlay"></div>
+        </div>
+
+
+        <div class="cta-content">
+            <h2 class="cta-heading">Ready to Find Your <span class="gradient-text">Next Drive?</span></h2>
+            <p class="cta-text">Discover, compare, book and manage your automotive journey from one seamlessly
+                integrated platform.</p>
+
+            <div class="cta-buttons">
+                <a href="404page.html" class="btn gradient-bg cta-btn-1">
+                    <span>Explore Vehicles</span> <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="404page.html" class="btn glass-btn cta-btn-2">
+                    <span>Book a Test Drive</span> <i class="fa-regular fa-calendar-check"></i>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="road-line-container">
+            <div class="road-line"></div>
+            <div class="road-glow"></div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">
+                        <img src="./asset/skybluelogo.webp" alt="logo">
+                    </a>
+                </div>
+                <p>Experience the future of driving. Your ultimate automotive platform for exploring, buying, and
+                    servicing premium vehicles.</p>
+                <div class="social-links">
+                    <a href="404page.html"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html">Our Services</a></li>
+                    <li><a href="blog.html">Latest News</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="404page.html">New Car Models</a></li>
+                    <li><a href="404page.html">Pre-Owned Vehicles</a></li>
+                    <li><a href="404page.html">Auto Financing</a></li>
+                    <li><a href="404page.html">Service & Maintenance</a></li>
+                    <li><a href="404page.html">Book a Test Drive</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-col contact-info" data-aos="fade-up" data-aos-delay="400">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@thestackly.com</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 98765 43210</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil,
+                            Salem</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Mon – Sun: 9:00 AM – 8:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 CarZone Automotive. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="404page.html">Privacy Policy</a>
+                <a href="404page.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            const slides = document.querySelectorAll(".hero-slide");
+            let currentSlide = 0;
+            let isAnimating = false;
+
+            function animateSlideContent(slideElement) {
+                const bgImg = slideElement.querySelector(".slide-bg");
+                const subHeading = slideElement.querySelector(".sub-heading");
+                const mainHeading = slideElement.querySelector(".main-heading");
+                const desc = slideElement.querySelector(".description");
+                const btns = slideElement.querySelector(".hero-btns");
+
+                const tl = gsap.timeline();
+
+
+                tl.fromTo(bgImg,
+                    { scale: 1.1 },
+                    { scale: 1, duration: 3, ease: "power1.out" }, 0
+                );
+
+
+                tl.fromTo([subHeading, mainHeading, desc, btns],
+                    { opacity: 0, y: 30 },
+                    { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: "power2.out" }, 0.2
+                );
+            }
+
+            function changeSlide(newIndex) {
+                if (isAnimating || newIndex === currentSlide) return;
+                isAnimating = true;
+
+                const current = slides[currentSlide];
+                const next = slides[newIndex];
+
+                gsap.to(current, {
+                    opacity: 0,
+                    duration: 0.5,
+                    onComplete: () => {
+                        current.classList.remove("active");
+                    }
+                });
+
+                next.classList.add("active");
+                gsap.to(next, {
+                    opacity: 1,
+                    duration: 0.5,
+                    onComplete: () => {
+                        isAnimating = false;
+                    }
+                });
+
+                animateSlideContent(next);
+                currentSlide = newIndex;
+            }
+
+
+            setInterval(() => {
+                let newIndex = (currentSlide + 1) % slides.length;
+                changeSlide(newIndex);
+            }, 3000);
+
+
+            animateSlideContent(slides[0]);
+
+
+            gsap.from(".hero-glass-panel", { opacity: 0, y: 50, duration: 1, delay: 0.8, ease: "power3.out" });
+            gsap.from(".spec-item", { opacity: 0, y: 20, duration: 0.8, stagger: 0.15, delay: 1, ease: "power2.out" });
+
+
+            const tabBtns = document.querySelectorAll(".tab-btn");
+            tabBtns.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    tabBtns.forEach(t => t.classList.remove("active"));
+                    btn.classList.add("active");
+                });
+            });
+
+
+            const searchBtn = document.getElementById("searchBtn");
+            const searchInput = document.getElementById("searchInput");
+            const searchError = document.getElementById("searchError");
+
+            searchBtn.addEventListener("click", () => {
+                if (searchInput.value.trim() === "") {
+                    searchError.style.display = "block";
+                } else {
+                    searchError.style.display = "none";
+                    window.location.href = "404page.html";
+                }
+            });
+
+
+            searchInput.addEventListener("input", () => {
+                searchError.style.display = "none";
+            });
+
+        });
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            gsap.registerPlugin(ScrollTrigger);
+
+
+            function initTimelineAnimations() {
+
+
+
+                const snakePath = document.getElementById("snake-fill");
+                if (snakePath && window.innerWidth > 991) {
+                    const pathLength = snakePath.getTotalLength();
+                    snakePath.style.strokeDasharray = pathLength;
+                    snakePath.style.strokeDashoffset = pathLength;
+
+                    gsap.to(snakePath, {
+                        strokeDashoffset: 0,
+                        ease: "none",
+                        scrollTrigger: {
+                            trigger: ".timeline-container",
+                            start: "top 70%",
+                            end: "bottom 90%",
+                            scrub: 1
+                        }
+                    });
+                }
+
+
+
+
+                const mobileLineFill = document.getElementById("mobile-fill");
+                if (mobileLineFill && window.innerWidth <= 991) {
+                    gsap.to(mobileLineFill, {
+                        height: "100%",
+                        ease: "none",
+                        scrollTrigger: {
+                            trigger: ".timeline-container",
+                            start: "top 80%",
+                            end: "bottom 90%",
+                            scrub: 1
+                        }
+                    });
+                }
+
+
+
+
+                const timeItems = document.querySelectorAll(".time-item");
+
+                timeItems.forEach((item) => {
+                    const dot = item.querySelector(".time-dot");
+                    const card = item.querySelector(".time-card");
+
+                    const tl = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top 85%",
+                            toggleActions: "play none none reverse"
+                        }
+                    });
+
+                    tl.from(dot, {
+                        scale: 0,
+                        opacity: 0,
+                        duration: 0.4,
+                        ease: "back.out(2)"
+                    })
+                        .from(card, {
+                            x: window.innerWidth > 991 ? (item.classList.contains("left-item") ? 40 : -40) : 30,
+                            opacity: 0,
+                            duration: 0.5,
+                            ease: "power2.out"
+                        }, "-=0.2");
+                });
+
+            }
+
+
+            setTimeout(() => {
+                initTimelineAnimations();
+            }, 100);
+
+        });
+
+
+
+        gsap.from(".expand-header", {
+            scrollTrigger: {
+                trigger: ".expand-services-section",
+                start: "top 85%",
+            },
+            opacity: 0,
+            y: -30,
+            duration: 0.8,
+            ease: "power3.out"
+        });
+
+        gsap.from(".expand-card", {
+            scrollTrigger: {
+                trigger: ".expand-container",
+                start: "top 80%",
+            },
+            opacity: 0,
+            y: 50,
+            duration: 0.8,
+            stagger: 0.15,
+            ease: "power2.out"
+        });
+
+
+
+
+
+        gsap.from(".editorial-header", {
+            scrollTrigger: {
+                trigger: ".editorial-featured-section",
+                start: "top 85%",
+            },
+            opacity: 0,
+            y: -30,
+            duration: 0.8,
+            ease: "power3.out"
+        });
+
+        gsap.from(".editorial-left", {
+            scrollTrigger: {
+                trigger: ".editorial-container",
+                start: "top 80%",
+            },
+            opacity: 0,
+            x: -50,
+            duration: 1,
+            ease: "power2.out"
+        });
+
+        gsap.from(".editorial-right", {
+            scrollTrigger: {
+                trigger: ".editorial-container",
+                start: "top 80%",
+            },
+            opacity: 0,
+            x: 50,
+            duration: 1,
+            ease: "power2.out"
+        });
+
+
+
+
+        const editorialData = [
+            {
+                bgText: "SPORTS",
+                image: "./asset/c13.webp",
+                model: "Audi R8 V10 Performance",
+                price: "$142,000",
+                engine: "5.2L V10 Gas",
+                mileage: "14 City / 23 Hwy",
+                trans: "7-Speed Automatic",
+                safety: "5-Star NHTSA"
+            },
+            {
+                bgText: "LUXURY",
+                image: "./asset/c6.webp",
+                model: "Mercedes-Benz S-Class",
+                price: "$114,500",
+                engine: "3.0L Inline-6 Turbo",
+                mileage: "21 City / 30 Hwy",
+                trans: "9-Speed Automatic",
+                safety: "Top Safety Pick+"
+            },
+            {
+                bgText: "SUV",
+                image: "./asset/c3.webp",
+                model: "Range Rover Velar",
+                price: "$61,500",
+                engine: "2.0L Turbocharged I4",
+                mileage: "20 City / 26 Hwy",
+                trans: "8-Speed Automatic",
+                safety: "Euro NCAP 5-Star"
+            },
+            {
+                bgText: "ELECTRIC",
+                image: "./asset/c5.webp",
+                model: "Tesla Model S Plaid",
+                price: "$108,490",
+                engine: "Tri Motor AWD",
+                mileage: "396 Miles Range",
+                trans: "Single Speed",
+                safety: "5-Star Overall"
+            }
+        ];
+
+        const thumbs = document.querySelectorAll(".ed-thumb");
+        const mainImg = document.getElementById("ed-main-img");
+        const bgText = document.getElementById("ed-bg-text");
+        const edDetails = document.getElementById("ed-details");
+
+
+        const elModel = document.getElementById("ed-model");
+        const elPrice = document.getElementById("ed-price");
+        const elEngine = document.getElementById("ed-engine");
+        const elMileage = document.getElementById("ed-mileage");
+        const elTrans = document.getElementById("ed-trans");
+        const elSafety = document.getElementById("ed-safety");
+
+        let isAnimating = false;
+
+        thumbs.forEach(thumb => {
+            thumb.addEventListener("click", function () {
+                if (isAnimating || this.classList.contains("active")) return;
+                isAnimating = true;
+
+
+                thumbs.forEach(t => t.classList.remove("active"));
+                this.classList.add("active");
+
+                const index = this.getAttribute("data-index");
+                const data = editorialData[index];
+
+                const tl = gsap.timeline();
+
+
+                tl.to([mainImg, edDetails, bgText], {
+                    opacity: 0,
+                    y: 15,
+                    duration: 0.3,
+                    ease: "power2.in",
+                    onComplete: () => {
+
+                        mainImg.src = data.image;
+                        bgText.innerText = data.bgText;
+                        elModel.innerText = data.model;
+                        elPrice.innerText = data.price;
+                        elEngine.innerText = data.engine;
+                        elMileage.innerText = data.mileage;
+                        elTrans.innerText = data.trans;
+                        elSafety.innerText = data.safety;
+                    }
+                })
+
+                    .to([mainImg, edDetails, bgText], {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.5,
+                        ease: "power2.out",
+                        onComplete: () => {
+                            isAnimating = false;
+                        }
+                    });
+            });
+        });
+
+
+
+
+
+
+
+        gsap.from(".compare-header", {
+            scrollTrigger: {
+                trigger: ".compare-section",
+                start: "top 85%",
+            },
+            opacity: 0,
+            y: -30,
+            duration: 0.8,
+            ease: "power3.out",
+            clearProps: "all"
+        });
+
+
+        gsap.from(".car-left", {
+            scrollTrigger: {
+                trigger: ".compare-showcase",
+                start: "top 80%",
+            },
+            opacity: 0,
+            x: -80,
+            duration: 1,
+            ease: "power2.out"
+        });
+
+
+        gsap.from(".car-left .car-img-box img", {
+            scrollTrigger: {
+                trigger: ".compare-showcase",
+                start: "top 80%",
+            },
+            scale: 0.7,
+            duration: 1.2,
+            ease: "back.out(1.5)"
+        });
+
+
+        gsap.from(".car-right", {
+            scrollTrigger: {
+                trigger: ".compare-showcase",
+                start: "top 80%",
+            },
+            opacity: 0,
+            x: 80,
+            duration: 1,
+            ease: "power2.out"
+        });
+
+
+        gsap.from(".car-right .car-img-box img", {
+            scrollTrigger: {
+                trigger: ".compare-showcase",
+                start: "top 80%",
+            },
+            scale: 0.7,
+            duration: 1.2,
+            ease: "back.out(1.5)"
+        });
+
+
+        gsap.from(".vs-badge", {
+            scrollTrigger: {
+                trigger: ".compare-showcase",
+                start: "top 75%",
+            },
+            scale: 0,
+            opacity: 0,
+            duration: 0.6,
+            delay: 0.5,
+            ease: "back.out(1.7)"
+        });
+
+
+        gsap.from(".spec-row", {
+            scrollTrigger: {
+                trigger: ".compare-specs-list",
+                start: "top 85%",
+            },
+            opacity: 0,
+            y: 40,
+            duration: 0.7,
+            stagger: 0.15,
+            ease: "power2.out",
+            clearProps: "all"
+        });
+
+
+
+
+
+
+
+        gsap.from(".tech-header", {
+            scrollTrigger: {
+                trigger: ".tech-spotlight-section",
+                start: "top 85%",
+            },
+            opacity: 0,
+            y: -30,
+            duration: 0.8,
+            ease: "power3.out",
+            clearProps: "all"
+        });
+
+
+        gsap.from(".tech-main-car", {
+            scrollTrigger: {
+                trigger: ".tech-car-wrapper",
+                start: "top 80%",
+            },
+            opacity: 0,
+            scale: 0.9,
+            y: 50,
+            duration: 1.2,
+            ease: "back.out(1.2)",
+            clearProps: "all"
+        });
+
+
+        gsap.from(".hotspot", {
+            scrollTrigger: {
+                trigger: ".tech-car-wrapper",
+                start: "top 75%",
+            },
+            scale: 0,
+            opacity: 0,
+            duration: 0.5,
+            stagger: 0.15,
+            ease: "back.out(2)",
+            clearProps: "all"
+        });
+
+
+        gsap.from(".m-tech-card", {
+            scrollTrigger: {
+                trigger: ".mobile-tech-list",
+                start: "top 85%",
+            },
+            opacity: 0,
+            y: 30,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: "power2.out",
+            clearProps: "all"
+        });
+
+
+
+
+
+
+
+        gsap.from(".journey-header", {
+            scrollTrigger: {
+                trigger: ".customer-journey-section",
+                start: "top 85%",
+            },
+            opacity: 0,
+            y: -30,
+            duration: 0.8,
+            ease: "power3.out",
+            clearProps: "all"
+        });
+
+
+        gsap.from(".stat-card", {
+            scrollTrigger: {
+                trigger: ".journey-stats-container",
+                start: "top 85%",
+            },
+            opacity: 0,
+            y: 40,
+            duration: 0.6,
+            stagger: 0.15,
+            ease: "power2.out",
+            clearProps: "all"
+        });
+
+
+        const counters = document.querySelectorAll('.count-val');
+
+        ScrollTrigger.create({
+            trigger: ".journey-stats-container",
+            start: "top 85%",
+            once: true,
+            onEnter: () => {
+                counters.forEach(counter => {
+                    const target = parseInt(counter.getAttribute('data-target'));
+
+
+                    let countObj = { val: 0 };
+
+                    gsap.to(countObj, {
+                        val: target,
+                        duration: 2.5,
+                        ease: "power2.out",
+                        onUpdate: function () {
+
+                            counter.innerHTML = Math.floor(countObj.val).toLocaleString() + "+";
+                        }
+                    });
+                });
+            }
+        });
+
+
+        gsap.from(".testimonial-strip-wrapper", {
+            scrollTrigger: {
+                trigger: ".testimonial-strip-wrapper",
+                start: "top 90%",
+            },
+            opacity: 0,
+            duration: 1,
+            ease: "power2.out",
+            clearProps: "all"
+        });
+
+
+
+
+
+
+
+
+        const ctaBg = document.getElementById("cta-parallax");
+        if (ctaBg) {
+            gsap.to(ctaBg, {
+                y: "10%",
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".final-cta-section",
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: true
+                }
+            });
+        }
+
+
+
+        gsap.from(".cta-content > *", {
+            scrollTrigger: {
+                trigger: ".final-cta-section",
+                start: "top 75%",
+            },
+            opacity: 0,
+            y: 40,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "power3.out",
+            clearProps: "all"
+        });
+
+    </script>
+</body>
+
+</html>

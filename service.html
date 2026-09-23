@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="ta">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarZone - Automotive Platform</title>
+
+    <link rel="stylesheet" href="service.css">
+    <link rel="stylesheet" href="common.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+
+    <div id="preloader">
+        <div class="loader-circle"></div>
+        <span class="loader-text">Stackly</span>
+    </div>
+
+
+    <div class="top-bar" id="topBar">
+        <div class="marquee-container">
+            <p class="marquee-text">🚀 Special Offer: Get Complete Details on New Car Models! 🌟 Premium Service
+                Available 24/7. <a href="404page.html">Learn More</a></p>
+        </div>
+        <span class="close-topbar" id="closeTopbar">&times;</span>
+    </div>
+
+
+    <header class="header" id="header">
+        <nav class="navbar">
+
+            <a href="index.html" class="logo" data-aos="fade-right" data-aos-duration="1000">
+                <img src="./asset/skybluelogo.webp" alt="logo">
+            </a>
+
+
+            <div class="nav-content">
+                <ul class="nav-menu">
+                    <li data-aos="fade-down" data-aos-delay="600"><a href="index.html" class="nav-link">Home</a></li>
+                    <li data-aos="fade-down" data-aos-delay="700"><a href="about.html" class="nav-link">About</a></li>
+                    <li data-aos="fade-down" data-aos-delay="800"><a href="service.html"
+                            class="nav-link active">Service</a></li>
+                    <li data-aos="fade-down" data-aos-delay="900"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li data-aos="fade-down" data-aos-delay="1000"><a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="nav-buttons">
+                    <a href="login.html" class="btn login-btn" data-aos="fade-up" data-aos-delay="600">Login</a>
+                    <a href="signup.html" class="btn signup-btn gradient-bg" data-aos="fade-up"
+                        data-aos-delay="700">Sign Up</a>
+                </div>
+            </div>
+
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="services-hero-section" id="services-hero">
+
+
+        <div class="srv-bg-wrapper">
+            <img src="./asset/c25.webp" class="srv-bg-img active" id="srv-bg-0" alt="Workshop">
+            <img src="./asset/c38.webp" class="srv-bg-img" id="srv-bg-1" alt="Maintenance">
+            <img src="./asset/c22.webp" class="srv-bg-img" id="srv-bg-2" alt="Detailing">
+            <div class="srv-overlay"></div>
+        </div>
+
+
+        <div class="floating-icons-container">
+            <i class="fa-solid fa-wrench float-icon fi-1"></i>
+            <i class="fa-solid fa-gear float-icon fi-2"></i>
+            <i class="fa-solid fa-oil-can float-icon fi-3"></i>
+            <i class="fa-solid fa-car-battery float-icon fi-4"></i>
+        </div>
+
+        <div class="srv-hero-container">
+
+
+            <div class="srv-hero-content">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <span class="active">Services</span>
+                </div>
+
+                <div class="srv-text-wrapper">
+                    <h1 class="srv-title" id="srv-title">Complete Care for <br><span class="gradient-text">Every
+                            Journey.</span></h1>
+                    <p class="srv-desc" id="srv-desc">Experience world-class automotive maintenance, diagnostics, and
+                        detailing performed by certified master technicians.</p>
+                </div>
+
+                <div class="srv-buttons">
+                    <a href="404page.html" class="btn gradient-bg">
+                        <span>Book a Service</span> <i class="fa-regular fa-calendar-check"></i>
+                    </a>
+                    <a href="404page.html" class="btn glass-btn">
+                        <span>Explore Services</span> <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+
+                <div class="srv-indicators">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+            </div>
+
+
+            <div class="srv-hero-floating">
+                <div class="glass-service-card" id="srv-card">
+                    <div class="sc-header">
+                        <div class="sc-icon" id="srv-card-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                        <div class="sc-badge">Premium</div>
+                    </div>
+                    <h3 class="sc-title" id="srv-card-title">General Maintenance</h3>
+                    <p class="sc-text" id="srv-card-text">Comprehensive multipoint inspection and fluid optimization for
+                        peak performance.</p>
+                    <div class="sc-features">
+                        <span><i class="fa-solid fa-check text-sky"></i> 100% Genuine Parts</span>
+                        <span><i class="fa-solid fa-check text-sky"></i> Certified Experts</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="srv-marquee-wrapper">
+            <div class="srv-marquee">
+                <span><i class="fa-solid fa-magnifying-glass-chart"></i> Inspection</span>
+                <span class="dot-separator">•</span>
+                <span><i class="fa-solid fa-screwdriver-wrench"></i> Maintenance</span>
+                <span class="dot-separator">•</span>
+                <span><i class="fa-solid fa-hammer"></i> Repair</span>
+                <span class="dot-separator">•</span>
+                <span><i class="fa-solid fa-spray-can-sparkles"></i> Detailing</span>
+                <span class="dot-separator">•</span>
+
+                <span><i class="fa-solid fa-magnifying-glass-chart"></i> Inspection</span>
+                <span class="dot-separator">•</span>
+                <span><i class="fa-solid fa-screwdriver-wrench"></i> Maintenance</span>
+                <span class="dot-separator">•</span>
+                <span><i class="fa-solid fa-hammer"></i> Repair</span>
+                <span class="dot-separator">•</span>
+                <span><i class="fa-solid fa-spray-can-sparkles"></i> Detailing</span>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <section class="service-selector-section" id="selector">
+
+        <div class="ss-header">
+            <h2 class="gradient-heading">What Does Your <span class="dark-text">Car Need?</span></h2>
+            <p class="ss-subtitle">Select a service below to explore our comprehensive automotive solutions.</p>
+        </div>
+
+        <div class="ss-container">
+
+
+            <div class="ss-tabs">
+                <button class="ss-tab-btn active" data-target="tab-maintenance">
+                    <i class="fa-solid fa-oil-can"></i> Maintenance
+                </button>
+                <button class="ss-tab-btn" data-target="tab-repair">
+                    <i class="fa-solid fa-wrench"></i> Repair
+                </button>
+                <button class="ss-tab-btn" data-target="tab-inspection">
+                    <i class="fa-solid fa-magnifying-glass-chart"></i> Inspection
+                </button>
+                <button class="ss-tab-btn" data-target="tab-detailing">
+                    <i class="fa-solid fa-spray-can-sparkles"></i> Detailing
+                </button>
+                <button class="ss-tab-btn" data-target="tab-emergency">
+                    <i class="fa-solid fa-truck-fast"></i> Emergency
+                </button>
+            </div>
+
+
+            <div class="ss-content-wrapper">
+
+
+                <div class="ss-panel active" id="tab-maintenance">
+                    <div class="ssp-info">
+                        <div class="ssp-duration"><i class="fa-regular fa-clock"></i> Est. Duration: 1 - 2 Hours</div>
+                        <h3 class="ssp-title">Routine Maintenance</h3>
+                        <p class="ssp-desc">Keep your vehicle running at peak performance and prevent costly breakdowns
+                            with our comprehensive routine maintenance packages.</p>
+                        <ul class="ssp-options">
+                            <li><i class="fa-solid fa-check"></i> Synthetic Oil & Filter Change</li>
+                            <li><i class="fa-solid fa-check"></i> Tire Rotation & Balancing</li>
+                            <li><i class="fa-solid fa-check"></i> Fluid Level Top-ups</li>
+                            <li><i class="fa-solid fa-check"></i> Brake Pad Inspection</li>
+                        </ul>
+                        <a href="404page.html" class="btn gradient-bg mt-4">Book Maintenance <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="ssp-image">
+                        <img src="./asset/c35.webp" alt="Maintenance">
+                    </div>
+                </div>
+
+
+                <div class="ss-panel" id="tab-repair">
+                    <div class="ssp-info">
+                        <div class="ssp-duration"><i class="fa-regular fa-clock"></i> Est. Duration: Varies (1 - 3 Days)
+                        </div>
+                        <h3 class="ssp-title">Mechanical Repairs</h3>
+                        <p class="ssp-desc">Expert diagnostics and precision mechanical repairs using 100% genuine OEM
+                            parts to ensure the safety and longevity of your vehicle.</p>
+                        <ul class="ssp-options">
+                            <li><i class="fa-solid fa-check"></i> Engine Diagnostics & Tuning</li>
+                            <li><i class="fa-solid fa-check"></i> Transmission Overhaul</li>
+                            <li><i class="fa-solid fa-check"></i> Suspension & Steering Repair</li>
+                            <li><i class="fa-solid fa-check"></i> Advanced Electrical Fixes</li>
+                        </ul>
+                        <a href="404page.html" class="btn gradient-bg mt-4">Book Repair <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="ssp-image">
+                        <img src="./asset/c26.webp" alt="Repair">
+                    </div>
+                </div>
+
+
+                <div class="ss-panel" id="tab-inspection">
+                    <div class="ssp-info">
+                        <div class="ssp-duration"><i class="fa-regular fa-clock"></i> Est. Duration: 2 - 3 Hours</div>
+                        <h3 class="ssp-title">Vehicle Inspection</h3>
+                        <p class="ssp-desc">Thorough bumper-to-bumper inspections for road-trip readiness, emissions
+                            compliance, or pre-purchase evaluations.</p>
+                        <ul class="ssp-options">
+                            <li><i class="fa-solid fa-check"></i> 150-Point Computerized Check</li>
+                            <li><i class="fa-solid fa-check"></i> Pre-Purchase Evaluation</li>
+                            <li><i class="fa-solid fa-check"></i> Battery Health & Alternator</li>
+                            <li><i class="fa-solid fa-check"></i> Emissions & Exhaust Test</li>
+                        </ul>
+                        <a href="404page.html" class="btn gradient-bg mt-4">Book Inspection <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="ssp-image">
+                        <img src="./asset/c30.webp" alt="Inspection">
+                    </div>
+                </div>
+
+
+                <div class="ss-panel" id="tab-detailing">
+                    <div class="ssp-info">
+                        <div class="ssp-duration"><i class="fa-regular fa-clock"></i> Est. Duration: 4 - 6 Hours</div>
+                        <h3 class="ssp-title">Premium Detailing</h3>
+                        <p class="ssp-desc">Restore your vehicle’s showroom shine with our meticulous exterior
+                            polishing, interior deep cleaning, and advanced coating.</p>
+                        <ul class="ssp-options">
+                            <li><i class="fa-solid fa-check"></i> Exterior Wash & Wax</li>
+                            <li><i class="fa-solid fa-check"></i> Advanced Ceramic Coating</li>
+                            <li><i class="fa-solid fa-check"></i> Interior Deep Vacuum & Shampoo</li>
+                            <li><i class="fa-solid fa-check"></i> Leather Conditioning & Care</li>
+                        </ul>
+                        <a href="404page.html" class="btn gradient-bg mt-4">Book Detailing <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="ssp-image">
+                        <img src="./asset/c28.webp" alt="Detailing">
+                    </div>
+                </div>
+
+
+                <div class="ss-panel" id="tab-emergency">
+                    <div class="ssp-info">
+                        <div class="ssp-duration"><i class="fa-regular fa-clock"></i> Fast Response: 24/7 Available
+                        </div>
+                        <h3 class="ssp-title">Emergency Assistance</h3>
+                        <p class="ssp-desc">Stranded on the road? Our rapid-response emergency team is available around
+                            the clock to get you back on track safely.</p>
+                        <ul class="ssp-options">
+                            <li><i class="fa-solid fa-check"></i> 24/7 Towing Services</li>
+                            <li><i class="fa-solid fa-check"></i> Flat Tire Replacement</li>
+                            <li><i class="fa-solid fa-check"></i> Battery Jump-Start</li>
+                            <li><i class="fa-solid fa-check"></i> Emergency Fuel Delivery</li>
+                        </ul>
+                        <a href="404page.html" class="btn gradient-bg mt-4">Request Help <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="ssp-image">
+                        <img src="./asset/c39.webp" alt="Emergency">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="service-journey-section" id="journey">
+
+        <div class="journey-header">
+            <h2 class="gradient-heading">From Booking to <br><span class="dark-text">Back on the Road</span></h2>
+            <p class="journey-subtitle">A seamless, transparent, and efficient 6-step service process.</p>
+        </div>
+
+
+        <div class="journey-pin-container">
+            <div class="journey-track">
+
+
+                <div class="j-step">
+                    <div class="j-step-img">
+                        <img src="./asset/c42.webp" alt="Book">
+                    </div>
+                    <div class="j-content">
+                        <div class="j-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                        <div class="j-num">01</div>
+                        <h3>Book</h3>
+                        <p>Schedule your service appointment online instantly at your preferred time and location.</p>
+                    </div>
+                </div>
+
+
+                <div class="j-step">
+                    <div class="j-step-img">
+                        <img src="./asset/c41.webp" alt="Inspect">
+                    </div>
+                    <div class="j-content">
+                        <div class="j-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <div class="j-num">02</div>
+                        <h3>Inspect</h3>
+                        <p>Our experts perform a rigorous 150-point diagnostic check to assess your vehicle's health.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="j-step">
+                    <div class="j-step-img">
+                        <img src="./asset/c35.webp" alt="Diagnose">
+                    </div>
+                    <div class="j-content">
+                        <div class="j-icon"><i class="fa-solid fa-microchip"></i></div>
+                        <div class="j-num">03</div>
+                        <h3>Diagnose</h3>
+                        <p>Using next-gen AI tools, we pinpoint the exact mechanical or electrical issues.</p>
+                    </div>
+                </div>
+
+
+                <div class="j-step">
+                    <div class="j-step-img">
+                        <img src="./asset/c37.webp" alt="Service">
+                    </div>
+                    <div class="j-content">
+                        <div class="j-icon"><i class="fa-solid fa-wrench"></i></div>
+                        <div class="j-num">04</div>
+                        <h3>Service</h3>
+                        <p>Precision repairs and maintenance executed using 100% genuine OEM parts.</p>
+                    </div>
+                </div>
+
+
+                <div class="j-step">
+                    <div class="j-step-img">
+                        <img src="./asset/c33.webp" alt="Quality Check">
+                    </div>
+                    <div class="j-content">
+                        <div class="j-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+                        <div class="j-num">05</div>
+                        <h3>Quality Check</h3>
+                        <p>Rigorous post-service testing by master technicians to ensure peak performance.</p>
+                    </div>
+                </div>
+
+
+                <div class="j-step">
+                    <div class="j-step-img">
+                        <img src="./asset/c12.webp" alt="Drive">
+                    </div>
+                    <div class="j-content">
+                        <div class="j-icon"><i class="fa-solid fa-car-side"></i></div>
+                        <div class="j-num">06</div>
+                        <h3>Drive</h3>
+                        <p>Get back on the road with total confidence and our extensive service warranty.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="premium-maint-section" id="maintenance">
+        <div class="pm-container">
+
+
+            <div class="pm-left">
+                <div class="pm-img-wrapper">
+                    <img src="./asset/c43.webp" alt="Premium Maintenance">
+                    <div class="pm-badge">
+                        <i class="fa-solid fa-check-double"></i>
+                        <span>150-Point <br>Certified Check</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="pm-right">
+                <h2 class="gradient-heading">Prevent Problems <br><span class="dark-text">Before They Start</span></h2>
+                <p class="pm-subtitle">Proactive care engineered to extend the life and performance of your premium
+                    vehicle.</p>
+
+
+                <div class="pm-accordion">
+
+
+                    <div class="pm-item active">
+                        <div class="pm-item-header">
+                            <div class="pm-icon"><i class="fa-solid fa-gears"></i></div>
+                            <h3 class="pm-item-title">Engine Check</h3>
+                            <i class="fa-solid fa-chevron-down pm-arrow"></i>
+                        </div>
+                        <div class="pm-item-content-wrapper">
+                            <div class="pm-item-content">
+                                <p>Complete computerized engine diagnostics, checking for misfires, optimal compression,
+                                    and fuel-air mixture balance.</p>
+                                <span class="pm-spec">Spec: OBD-II AI Diagnostics</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="pm-item">
+                        <div class="pm-item-header">
+                            <div class="pm-icon"><i class="fa-solid fa-oil-can"></i></div>
+                            <h3 class="pm-item-title">Oil & Filter</h3>
+                            <i class="fa-solid fa-chevron-down pm-arrow"></i>
+                        </div>
+                        <div class="pm-item-content-wrapper">
+                            <div class="pm-item-content">
+                                <p>Drain and replace with high-performance synthetic oil and install OEM certified
+                                    premium filters for maximum engine protection.</p>
+                                <span class="pm-spec">Spec: Fully Synthetic 5W-40 / 0W-20</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="pm-item">
+                        <div class="pm-item-header">
+                            <div class="pm-icon"><i class="fa-solid fa-car"></i></div>
+                            <h3 class="pm-item-title">Brake Inspection</h3>
+                            <i class="fa-solid fa-chevron-down pm-arrow"></i>
+                        </div>
+                        <div class="pm-item-content-wrapper">
+                            <div class="pm-item-content">
+                                <p>Thorough measurement of brake pad thickness, rotor surfacing, and hydraulic brake
+                                    fluid flush to guarantee stopping power.</p>
+                                <span class="pm-spec">Spec: DOT 4 Fluid & Ceramic Pads</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="pm-item">
+                        <div class="pm-item-header">
+                            <div class="pm-icon"><i class="fa-solid fa-car-battery"></i></div>
+                            <h3 class="pm-item-title">Battery Check</h3>
+                            <i class="fa-solid fa-chevron-down pm-arrow"></i>
+                        </div>
+                        <div class="pm-item-content-wrapper">
+                            <div class="pm-item-content">
+                                <p>Voltage load testing, terminal cleaning, and alternator output verification to
+                                    prevent unexpected starting failures.</p>
+                                <span class="pm-spec">Spec: 12V / AGM Battery Test</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="pm-item">
+                        <div class="pm-item-header">
+                            <div class="pm-icon"><i class="fa-solid fa-dharmachakra"></i></div>
+                            <h3 class="pm-item-title">Tyre & Alignment</h3>
+                            <i class="fa-solid fa-chevron-down pm-arrow"></i>
+                        </div>
+                        <div class="pm-item-content-wrapper">
+                            <div class="pm-item-content">
+                                <p>Precision 3D laser wheel alignment, tire rotation, and tread depth analysis for
+                                    smooth handling and even wear.</p>
+                                <span class="pm-spec">Spec: 3D Laser Precision Alignment</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="pm-item">
+                        <div class="pm-item-header">
+                            <div class="pm-icon"><i class="fa-solid fa-snowflake"></i></div>
+                            <h3 class="pm-item-title">AC Service</h3>
+                            <i class="fa-solid fa-chevron-down pm-arrow"></i>
+                        </div>
+                        <div class="pm-item-content-wrapper">
+                            <div class="pm-item-content">
+                                <p>Evacuation and recharge of refrigerant, compressor check, and cabin air filter
+                                    replacement for optimal cooling.</p>
+                                <span class="pm-spec">Spec: R-134a / R-1234yf Recharge</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="service-packages-section" id="packages">
+
+        <div class="pkg-header">
+            <h2 class="gradient-heading">Choose Your <span class="white-text">Care Plan</span></h2>
+            <p class="pkg-subtitle">Transparent pricing. Unmatched service quality. Select the plan that fits your
+                vehicle.</p>
+        </div>
+
+        <div class="pkg-container">
+
+
+            <div class="pkg-panel active" id="pkg-1">
+                <div class="pkg-panel-bg"></div>
+
+
+                <div class="pkg-collapsed-content">
+                    <div class="pkg-icon"><i class="fa-solid fa-wrench"></i></div>
+                    <h3 class="pkg-title-small">Essential Care</h3>
+                    <div class="pkg-price-small">₹4,999</div>
+                    <i class="fa-solid fa-chevron-down mobile-arrow"></i>
+                </div>
+
+
+                <div class="pkg-expanded-content">
+                    <div class="pkg-exp-header">
+                        <h3 class="pkg-title-large">Essential Care</h3>
+                        <div class="pkg-price-large">₹4,999<span>/visit</span></div>
+                    </div>
+                    <p class="pkg-desc">Perfect for regular upkeep and maintaining baseline performance.</p>
+                    <ul class="pkg-features">
+                        <li><i class="fa-solid fa-check text-sky"></i> Routine maintenance</li>
+                        <li><i class="fa-solid fa-check text-sky"></i> Synthetic Oil & Filter change</li>
+                        <li><i class="fa-solid fa-check text-sky"></i> Fluid level top-up</li>
+                        <li><i class="fa-solid fa-check text-sky"></i> Basic 50-point inspection</li>
+                    </ul>
+                    <a href="404page.html" class="btn gradient-bg pkg-btn">Select Plan <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+
+            <div class="pkg-panel" id="pkg-2">
+                <div class="pkg-panel-bg pkg-bg-2"></div>
+
+                <div class="pkg-collapsed-content">
+                    <div class="pkg-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                    <h3 class="pkg-title-small">Performance</h3>
+                    <div class="pkg-price-small">₹8,999</div>
+                    <i class="fa-solid fa-chevron-down mobile-arrow"></i>
+                </div>
+
+                <div class="pkg-expanded-content">
+                    <div class="pkg-exp-header">
+                        <h3 class="pkg-title-large">Performance Care</h3>
+                        <div class="pkg-price-large">₹8,999<span>/visit</span></div>
+                    </div>
+                    <p class="pkg-desc">Advanced diagnostics and tuning for drivers who demand more power.</p>
+                    <ul class="pkg-features">
+                        <li><i class="fa-solid fa-check text-sky"></i> Advanced 150-point inspection</li>
+                        <li><i class="fa-solid fa-check text-sky"></i> Engine performance tuning</li>
+                        <li><i class="fa-solid fa-check text-sky"></i> Wheel alignment & balancing</li>
+                        <li><i class="fa-solid fa-check text-sky"></i> Brake pad & rotor check</li>
+                    </ul>
+                    <a href="404page.html" class="btn gradient-bg pkg-btn">Select Plan <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+
+            <div class="pkg-panel" id="pkg-3">
+                <div class="pkg-panel-bg pkg-bg-3"></div>
+
+                <div class="pkg-collapsed-content">
+                    <div class="pkg-icon"><i class="fa-solid fa-gem"></i></div>
+                    <h3 class="pkg-title-small">Complete Care</h3>
+                    <div class="pkg-price-small">₹14,999</div>
+                    <i class="fa-solid fa-chevron-down mobile-arrow"></i>
+                </div>
+
+                <div class="pkg-expanded-content">
+                    <div class="pkg-exp-header">
+                        <h3 class="pkg-title-large">Complete Care</h3>
+                        <div class="pkg-price-large">₹14,999<span>/visit</span></div>
+                    </div>
+                    <p class="pkg-desc">The ultimate VIP treatment for your vehicle, inside and out.</p>
+                    <ul class="pkg-features">
+                        <li><i class="fa-solid fa-check text-sky"></i> Full mechanical maintenance</li>
+                        <li><i class="fa-solid fa-check text-sky"></i> Premium exterior & interior detailing</li>
+                        <li><i class="fa-solid fa-check text-sky"></i> Ceramic wax coating</li>
+                        <li><i class="fa-solid fa-check text-sky"></i> 24/7 Priority support & towing</li>
+                    </ul>
+                    <a href="404page.html" class="btn gradient-bg pkg-btn">Select Plan <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="testimonial-section" id="testimonials">
+        <div class="testi-container">
+
+
+            <div class="testi-left">
+                <h2 class="gradient-heading">Trusted After <br><span class="dark-text">The Drive</span></h2>
+                <p class="testi-subtitle">Don't just take our word for it. Hear from drivers who have experienced our
+                    premium automotive care.</p>
+
+
+                <div class="testi-selectors">
+
+                    <div class="testi-btn active" data-target="testi-1">
+                        <img src="./asset/a23.webp" alt="Client 1">
+                        <div class="btn-info">
+                            <h5>Michael R.</h5>
+                            <span>BMW X5</span>
+                        </div>
+                    </div>
+
+                    <div class="testi-btn" data-target="testi-2">
+                        <img src="./asset/a25.webp" alt="Client 2">
+                        <div class="btn-info">
+                            <h5>Sarah J.</h5>
+                            <span>Audi Q7</span>
+                        </div>
+                    </div>
+
+                    <div class="testi-btn" data-target="testi-3">
+                        <img src="./asset/a29.webp" alt="Client 3">
+                        <div class="btn-info">
+                            <h5>David K.</h5>
+                            <span>Tesla Model 3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="testi-right">
+
+
+                <div class="testi-display-box active" id="testi-1">
+                    <i class="fa-solid fa-quote-right quote-mark"></i>
+                    <div class="testi-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testi-review">"The entire service process was incredibly simple and transparent. The
+                        real-time updates and the video breakdown of my engine diagnostics gave me total peace of mind.
+                        Highly recommended!"</p>
+                    <div class="testi-user-large">
+                        <img src="./asset/a23.webp" alt="Michael R.">
+                        <div class="user-details">
+                            <h4>Michael R.</h4>
+                            <span>Performance Care</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="testi-display-box" id="testi-2">
+                    <i class="fa-solid fa-quote-right quote-mark"></i>
+                    <div class="testi-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testi-review">"I've never experienced such premium detailing before. They treated my Audi
+                        with absolute care. The ceramic coating looks phenomenal, and their support team is always
+                        responsive."</p>
+                    <div class="testi-user-large">
+                        <img src="./asset/a25.webp" alt="Sarah J.">
+                        <div class="user-details">
+                            <h4>Sarah J.</h4>
+                            <span>Complete Care</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="testi-display-box" id="testi-3">
+                    <i class="fa-solid fa-quote-right quote-mark"></i>
+                    <div class="testi-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="testi-review">"Finally, a service center that understands EVs perfectly. The battery
+                        health check and alignment were done swiftly while I waited in their premium lounge. Effortless
+                        and professional."</p>
+                    <div class="testi-user-large">
+                        <img src="./asset/a29.webp" alt="David K.">
+                        <div class="user-details">
+                            <h4>David K.</h4>
+                            <span>Essential Care</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="srv-cta-section" id="service-cta">
+
+
+        <div class="srv-cta-bg">
+
+            <img src="./asset/c1.webp" alt="Premium Workshop">
+            <div class="srv-cta-overlay"></div>
+        </div>
+
+
+        <div class="srv-cta-content">
+            <h2 class="srv-cta-heading">Ready for a Better <br><span class="gradient-text">Service Experience?</span>
+            </h2>
+            <p class="srv-cta-text">Book maintenance, diagnostics or repairs with a platform designed entirely around
+                your vehicle.</p>
+
+            <div class="srv-cta-buttons">
+                <a href="404page.html" class="btn gradient-bg">
+                    <span>Book a Service</span> <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="404page.html" class="btn glass-btn">
+                    <span>Find a Service Center</span> <i class="fa-solid fa-location-dot"></i>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">
+                        <img src="./asset/skybluelogo.webp" alt="logo">
+                    </a>
+                </div>
+                <p>Experience the future of driving. Your ultimate automotive platform for exploring, buying, and
+                    servicing premium vehicles.</p>
+                <div class="social-links">
+                    <a href="404page.html"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="404page.html"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html">Our Services</a></li>
+                    <li><a href="blog.html">Latest News</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="404page.html">New Car Models</a></li>
+                    <li><a href="404page.html">Pre-Owned Vehicles</a></li>
+                    <li><a href="404page.html">Auto Financing</a></li>
+                    <li><a href="404page.html">Service & Maintenance</a></li>
+                    <li><a href="404page.html">Book a Test Drive</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-col contact-info" data-aos="fade-up" data-aos-delay="400">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@thestackly.com</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 98765 43210</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil,
+                            Salem</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Mon – Sun: 9:00 AM – 8:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 CarZone Automotive. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="404page.html">Privacy Policy</a>
+                <a href="404page.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+
+            gsap.from(".srv-hero-content > *", {
+                opacity: 0, y: 40, duration: 1, stagger: 0.2, ease: "power3.out", delay: 0.2, clearProps: "all"
+            });
+
+            gsap.from(".glass-service-card", {
+                opacity: 0, x: window.innerWidth > 991 ? 50 : 0, y: window.innerWidth <= 991 ? 40 : 0,
+                duration: 1, delay: 0.8, ease: "back.out(1.2)", clearProps: "all"
+            });
+
+            gsap.from(".srv-marquee-wrapper", {
+                opacity: 0, y: 30, duration: 1, delay: 1, ease: "power2.out", clearProps: "all"
+            });
+
+
+
+
+            const srvData = [
+                {
+                    title: "Complete Care for <br>", highlight: "Every Journey.",
+                    desc: "Experience world-class automotive maintenance, diagnostics, and detailing performed by certified master technicians.",
+                    cardIcon: "fa-screwdriver-wrench", cardTitle: "General Maintenance",
+                    cardText: "Comprehensive multipoint inspection and fluid optimization for peak performance."
+                },
+                {
+                    title: "Precision Engineering, <br>", highlight: "Flawless Execution.",
+                    desc: "From engine tuning to complex transmission overhauls, our experts ensure your vehicle operates at its absolute best.",
+                    cardIcon: "fa-gears", cardTitle: "Mechanical Repair",
+                    cardText: "Advanced engine diagnostics and precision repairs using 100% genuine OEM parts."
+                },
+                {
+                    title: "Restore the Glow, <br>", highlight: "Protect the Finish.",
+                    desc: "Premium detailing, ceramic coating, and interior restoration services to make your car look brand new.",
+                    cardIcon: "fa-spray-can-sparkles", cardTitle: "Premium Detailing",
+                    cardText: "Deep cleaning, paint correction, and advanced ceramic coating for ultimate protection."
+                }
+            ];
+
+            let currentIndex = 0;
+            let isAnimating = false;
+
+            const dots = document.querySelectorAll(".srv-indicators .dot");
+            const bgImages = document.querySelectorAll(".srv-bg-img");
+
+            function updateServiceSlide(newIndex) {
+                if (isAnimating || newIndex === currentIndex) return;
+                isAnimating = true;
+                const data = srvData[newIndex];
+
+
+                const tl = gsap.timeline();
+                tl.to([".srv-text-wrapper", ".glass-service-card"], {
+                    opacity: 0, y: 15, duration: 0.4, ease: "power2.in",
+                    onComplete: () => {
+
+                        document.getElementById("srv-title").innerHTML = `${data.title}<span class="gradient-text">${data.highlight}</span>`;
+                        document.getElementById("srv-desc").innerText = data.desc;
+
+
+                        document.getElementById("srv-card-icon").innerHTML = `<i class="fa-solid ${data.cardIcon}"></i>`;
+                        document.getElementById("srv-card-title").innerText = data.cardTitle;
+                        document.getElementById("srv-card-text").innerText = data.cardText;
+
+
+                        bgImages.forEach(img => img.classList.remove("active"));
+                        document.getElementById(`srv-bg-${newIndex}`).classList.add("active");
+
+
+                        dots.forEach(dot => dot.classList.remove("active"));
+                        dots[newIndex].classList.add("active");
+
+                        currentIndex = newIndex;
+                    }
+                })
+
+                    .to([".srv-text-wrapper", ".glass-service-card"], {
+                        opacity: 1, y: 0, duration: 0.6, ease: "power2.out",
+                        onComplete: () => { isAnimating = false; }
+                    });
+            }
+
+
+            setInterval(() => {
+                let nextIndex = (currentIndex + 1) % srvData.length;
+                updateServiceSlide(nextIndex);
+            }, 5000);
+
+        });
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            gsap.registerPlugin(ScrollTrigger);
+
+
+            gsap.from(".ss-header", {
+                scrollTrigger: { trigger: ".service-selector-section", start: "top 85%" },
+                opacity: 0, y: -30, duration: 0.8, ease: "power3.out", clearProps: "all"
+            });
+
+            gsap.from(".ss-tabs", {
+                scrollTrigger: { trigger: ".service-selector-section", start: "top 80%" },
+                opacity: 0, y: 30, duration: 0.8, ease: "power2.out", clearProps: "all"
+            });
+
+            gsap.from(".ss-content-wrapper", {
+                scrollTrigger: { trigger: ".ss-tabs", start: "top 75%" },
+                opacity: 0, y: 40, duration: 0.8, delay: 0.2, ease: "power2.out", clearProps: "all"
+            });
+
+
+
+
+            const tabBtns = document.querySelectorAll('.ss-tab-btn');
+            const panels = document.querySelectorAll('.ss-panel');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+
+
+                    if (btn.classList.contains('active')) return;
+
+
+                    tabBtns.forEach(t => t.classList.remove('active'));
+                    panels.forEach(p => p.classList.remove('active'));
+
+
+                    btn.classList.add('active');
+
+
+                    const targetId = btn.getAttribute('data-target');
+                    const targetPanel = document.getElementById(targetId);
+
+                    if (targetPanel) {
+                        targetPanel.classList.add('active');
+                    }
+
+
+                    if (window.innerWidth < 991) {
+                        btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                    }
+                });
+            });
+
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            gsap.registerPlugin(ScrollTrigger);
+
+
+            gsap.from(".journey-header", {
+                scrollTrigger: { trigger: ".service-journey-section", start: "top 85%" },
+                opacity: 0, y: -30, duration: 0.8, ease: "power3.out", clearProps: "all"
+            });
+
+
+
+
+            let mm = gsap.matchMedia();
+
+
+            mm.add("(min-width: 992px)", () => {
+
+                let track = document.querySelector(".journey-track");
+
+
+                let getScrollAmount = () => -(track.scrollWidth - window.innerWidth + (window.innerWidth * 0.05));
+
+                let tween = gsap.to(track, {
+                    x: getScrollAmount,
+                    ease: "none"
+                });
+
+                ScrollTrigger.create({
+                    trigger: ".service-journey-section",
+                    start: "center center", 
+                    end: () => `+=${track.scrollWidth - window.innerWidth}`, 
+                    pin: true,
+                    animation: tween,
+                    scrub: 1,
+                    invalidateOnRefresh: true 
+                });
+            });
+
+
+            mm.add("(max-width: 991px)", () => {
+
+                gsap.from(".j-step", {
+                    scrollTrigger: {
+                        trigger: ".journey-track",
+                        start: "top 85%",
+                    },
+                    opacity: 0,
+                    y: 30,
+                    duration: 0.6,
+                    stagger: 0.15, 
+                    ease: "power2.out",
+                    clearProps: "all"
+                });
+
+            });
+
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            gsap.registerPlugin(ScrollTrigger);
+
+
+            gsap.from(".pm-img-wrapper", {
+                scrollTrigger: { trigger: ".premium-maint-section", start: "top 80%" },
+                opacity: 0, x: -50, duration: 1, ease: "power3.out", clearProps: "all"
+            });
+
+            gsap.from(".pm-right .gradient-heading, .pm-subtitle", {
+                scrollTrigger: { trigger: ".pm-right", start: "top 85%" },
+                opacity: 0, y: 30, duration: 0.8, stagger: 0.2, ease: "power2.out", clearProps: "all"
+            });
+
+            gsap.from(".pm-item", {
+                scrollTrigger: { trigger: ".pm-accordion", start: "top 85%" },
+                opacity: 0, y: 20, duration: 0.6, stagger: 0.1, ease: "power2.out", clearProps: "all"
+            });
+
+
+            const maintItems = document.querySelectorAll('.pm-item');
+
+            maintItems.forEach(item => {
+                const header = item.querySelector('.pm-item-header');
+
+                header.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+
+
+                    maintItems.forEach(i => i.classList.remove('active'));
+
+
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+
+        });
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            gsap.registerPlugin(ScrollTrigger);
+
+
+            gsap.from(".testi-left > h2, .testi-left > p", {
+                scrollTrigger: { trigger: ".testimonial-section", start: "top 85%" },
+                opacity: 0, y: -30, duration: 0.8, stagger: 0.2, ease: "power3.out", clearProps: "all"
+            });
+
+            gsap.from(".testi-btn", {
+                scrollTrigger: { trigger: ".testi-selectors", start: "top 85%" },
+                opacity: 0, x: -30, duration: 0.6, stagger: 0.15, ease: "power2.out", clearProps: "all"
+            });
+
+            gsap.from(".testi-right", {
+                scrollTrigger: { trigger: ".testimonial-section", start: "top 75%" },
+                opacity: 0, y: 40, duration: 1, ease: "power3.out", clearProps: "all"
+            });
+
+
+
+
+            const testiBtns = document.querySelectorAll('.testi-btn');
+            const testiBoxes = document.querySelectorAll('.testi-display-box');
+
+            testiBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+
+                    if (btn.classList.contains('active')) return;
+
+
+                    testiBtns.forEach(b => b.classList.remove('active'));
+                    testiBoxes.forEach(box => box.classList.remove('active'));
+
+
+                    btn.classList.add('active');
+
+
+                    const targetId = btn.getAttribute('data-target');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            gsap.registerPlugin(ScrollTrigger);
+
+
+            gsap.from(".pkg-header", {
+                scrollTrigger: { trigger: ".service-packages-section", start: "top 85%" },
+                opacity: 0, y: -30, duration: 0.8, ease: "power3.out", clearProps: "all"
+            });
+
+            gsap.from(".pkg-panel", {
+                scrollTrigger: { trigger: ".pkg-container", start: "top 75%" },
+                opacity: 0, y: 50, duration: 0.8, stagger: 0.2, ease: "power2.out", clearProps: "all"
+            });
+
+
+
+
+            const pkgPanels = document.querySelectorAll('.pkg-panel');
+
+
+            if (window.innerWidth > 991 && pkgPanels.length > 0) {
+                pkgPanels[0].classList.add('active');
+            }
+
+            pkgPanels.forEach(panel => {
+
+
+                panel.addEventListener('mouseenter', () => {
+                    if (window.innerWidth > 991) {
+                        pkgPanels.forEach(p => p.classList.remove('active'));
+                        panel.classList.add('active');
+                    }
+                });
+
+
+                panel.addEventListener('click', () => {
+                    if (window.innerWidth <= 991) {
+                        const isActive = panel.classList.contains('active');
+
+
+                        pkgPanels.forEach(p => p.classList.remove('active'));
+
+
+                        if (!isActive) {
+                            panel.classList.add('active');
+                        }
+                    }
+                });
+            });
+
+        });
+
+
+
+
+        gsap.from(".srv-cta-content > *", {
+            scrollTrigger: {
+                trigger: ".srv-cta-section",
+                start: "top 80%", 
+            },
+            opacity: 0,
+            y: 40,
+            duration: 0.8,
+            stagger: 0.2, 
+            ease: "power3.out",
+            clearProps: "all" 
+        });
+
+    </script>
+</body>
+
+</html>
