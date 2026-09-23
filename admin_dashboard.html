@@ -16,6 +16,12 @@
 
 
     <link rel="stylesheet" href="admin_dashboard.css">
+
+    <script>
+        if (!sessionStorage.getItem('userEmail')) {
+            window.location.replace("login.html");
+        }
+    </script>
 </head>
 
 <body>

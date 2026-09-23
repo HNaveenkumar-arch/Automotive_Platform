@@ -16,6 +16,11 @@
 
 
     <link rel="stylesheet" href="customer_dashboard.css">
+    <script>
+        if (!sessionStorage.getItem('userEmail')) {
+            window.location.replace("login.html");
+        }
+    </script>
 </head>
 
 <body>
@@ -513,7 +518,7 @@
             if (!storedEmail) {
 
                 window.location.replace("login.html");
-                return; 
+                return;
             }
 
 
